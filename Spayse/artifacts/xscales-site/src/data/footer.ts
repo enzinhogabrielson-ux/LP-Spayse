@@ -29,6 +29,21 @@ const institutionalLabels = {
     en: 'Ombudsman',
     es: 'Canal de Quejas',
   },
+  polSeguranca: {
+    pt: 'Política de Segurança (PDF)',
+    en: 'Security Policy (PDF)',
+    es: 'Política de Seguridad (PDF)',
+  },
+  polKyc: {
+    pt: 'Política de KYC (PDF)',
+    en: 'KYC Policy (PDF)',
+    es: 'Política de KYC (PDF)',
+  },
+  polPld: {
+    pt: 'Política de PLD/FT (PDF)',
+    en: 'AML/CFT Policy (PDF)',
+    es: 'Política de PLD/FT (PDF)',
+  },
 } as const;
 
 export const footerLinks = {
@@ -100,6 +115,24 @@ export const footerLinks = {
         return institutionalLabels.ouvidoria[getLang()];
       },
       href: '/ouvidoria',
+    },
+    {
+      get label() {
+        return institutionalLabels.polSeguranca[getLang()];
+      },
+      href: '/docs/politica-seguranca.pdf',
+    },
+    {
+      get label() {
+        return institutionalLabels.polKyc[getLang()];
+      },
+      href: '/docs/politica-kyc.pdf',
+    },
+    {
+      get label() {
+        return institutionalLabels.polPld[getLang()];
+      },
+      href: '/docs/politica-pld.pdf',
     },
   ],
 };

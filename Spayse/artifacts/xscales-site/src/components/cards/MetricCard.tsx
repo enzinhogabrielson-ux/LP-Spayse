@@ -100,14 +100,14 @@ export default function MetricCard({
     >
       <div
         className={cn(
-          'font-bold text-primary-gold text-glow',
-          compact ? 'mb-1 text-2xl md:text-3xl' : 'mb-2 text-4xl md:text-5xl'
+          'font-bold text-accent-gold ',
+          compact ? 'mb-1 text-xl md:text-2xl' : 'mb-2 text-4xl md:text-5xl'
         )}
         style={{ letterSpacing: '-0.03em' }}
       >
         {displayValue}
       </div>
-      <div className={cn(compact ? 'text-xs text-muted-45' : 'text-sm font-medium text-muted-55')}>
+      <div className={cn(compact ? 'text-[11px] text-muted-45' : 'text-sm font-medium text-muted-55')}>
         {label}
       </div>
     </motion.div>

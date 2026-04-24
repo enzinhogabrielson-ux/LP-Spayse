@@ -15,7 +15,7 @@ export default function Sobre() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   usePageMeta({
-    title: `${t('sobre.label')} | XSCALES`,
+    title: `${t('sobre.label')} | Spayse`,
     description: t('sobre.subtitle'),
   });
 
@@ -78,11 +78,11 @@ export default function Sobre() {
                     <div className="absolute bottom-5 left-5">
                       <span
                         className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wide mb-2"
-                        style={{ background: 'rgba(255,197,0,0.85)', backdropFilter: 'blur(6px)', color: '#050816', letterSpacing: '0.05em' }}
+                        style={{ background: 'rgba(201,168,76,0.85)', backdropFilter: 'blur(6px)', color: '#050816', letterSpacing: '0.05em' }}
                       >
                         {s.tag}
                       </span>
-                      <div className="h-0.5 w-10 rounded-full" style={{ background: 'linear-gradient(90deg,#FFC500,#009FAD)' }} />
+                      <div className="h-0.5 w-10 rounded-full" style={{ background: 'linear-gradient(90deg,#C9A84C,#1E4FA0)' }} />
                     </div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function Sobre() {
             <Link href="/solucoes" data-testid="link-sobre-solutions">
               <button
                 className="px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
-                style={{ background: '#FFC500', color: '#050816', boxShadow: '0 0 24px rgba(255,197,0,0.25)' }}
+                style={{ background: '#C9A84C', color: '#050816', boxShadow: '0 0 24px rgba(201,168,76,0.25)' }}
               >
                 {t('sobre.ctaBtn1')}
               </button>
@@ -125,8 +125,8 @@ export default function Sobre() {
             <Link href="/contato" data-testid="link-sobre-contact">
               <button
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
-                style={{ border: '1px solid rgba(255,197,0,0.30)', color: '#FFC500', background: 'transparent' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,197,0,0.08)'; }}
+                style={{ border: '1px solid rgba(201,168,76,0.30)', color: '#C9A84C', background: 'transparent' }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.08)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
               >
                 {t('sobre.ctaBtn2')}

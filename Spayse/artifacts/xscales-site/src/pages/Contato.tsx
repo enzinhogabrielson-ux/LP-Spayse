@@ -108,9 +108,9 @@ function DiagnosticForm() {
         >
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
-            style={{ background: 'rgba(0,159,173,0.15)', border: '1px solid rgba(0,159,173,0.35)' }}
+            style={{ background: 'rgba(30,79,160,0.15)', border: '1px solid rgba(30,79,160,0.35)' }}
           >
-            <CheckCircle size={32} style={{ color: '#009FAD' }} />
+            <CheckCircle size={32} style={{ color: '#1E4FA0' }} />
           </div>
           <div className="text-xl font-bold text-white mb-3" role="heading" aria-level={3} style={{ color: '#fff' }}>{t('form.successTitle')}</div>
           <div className="text-sm leading-relaxed" style={{ color: 'rgba(248,250,252,0.62)' }}>
@@ -128,7 +128,7 @@ function DiagnosticForm() {
                   flex: 1,
                   height: '3px',
                   borderRadius: '99px',
-                  background: s.id <= step ? '#009FAD' : 'rgba(255,255,255,0.12)',
+                  background: s.id <= step ? '#1E4FA0' : 'rgba(255,255,255,0.12)',
                   transition: 'background 0.4s ease',
                 }}
               />
@@ -148,15 +148,15 @@ function DiagnosticForm() {
               <div className="flex items-start gap-3 mb-5">
                 <div
                   style={{
-                    background: 'rgba(0,159,173,0.12)',
-                    border: '1px solid rgba(0,159,173,0.25)',
+                    background: 'rgba(30,79,160,0.12)',
+                    border: '1px solid rgba(30,79,160,0.25)',
                     borderRadius: '10px',
                     padding: '8px',
                     flexShrink: 0,
                     marginTop: '2px',
                   }}
                 >
-                  <StepIcon size={18} style={{ color: '#009FAD' }} />
+                  <StepIcon size={18} style={{ color: '#1E4FA0' }} />
                 </div>
                 <div>
                   <div className="text-xl font-bold text-white" style={{ letterSpacing: '-0.02em', color: '#fff' }} role="heading" aria-level={3}>{currentStep.title}</div>
@@ -176,7 +176,7 @@ function DiagnosticForm() {
                       placeholder={t('form.namePlaceholder')}
                       value={formData.name}
                       onChange={e => setFormData(d => ({ ...d, name: e.target.value }))}
-                      onFocus={e => { e.currentTarget.style.borderColor = '#FFC500'; }}
+                      onFocus={e => { e.currentTarget.style.borderColor = '#C9A84C'; }}
                       onBlur={e => { e.currentTarget.style.borderColor = errors.name ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       style={{ ...inputBase, borderColor: errors.name ? '#ef4444' : 'rgba(255,255,255,0.10)' }}
                       data-testid="diag-input-name"
@@ -192,7 +192,7 @@ function DiagnosticForm() {
                       placeholder="(00) 00000-0000"
                       value={formData.whatsapp}
                       onChange={e => setFormData(d => ({ ...d, whatsapp: formatPhone(e.target.value) }))}
-                      onFocus={e => { e.currentTarget.style.borderColor = '#FFC500'; }}
+                      onFocus={e => { e.currentTarget.style.borderColor = '#C9A84C'; }}
                       onBlur={e => { e.currentTarget.style.borderColor = errors.whatsapp ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       style={{ ...inputBase, borderColor: errors.whatsapp ? '#ef4444' : 'rgba(255,255,255,0.10)' }}
                       data-testid="diag-input-whatsapp"
@@ -210,11 +210,11 @@ function DiagnosticForm() {
                       key={opt}
                       onClick={() => setFormData(d => ({ ...d, market: opt }))}
                       style={{
-                        background: formData.market === opt ? 'rgba(255,197,0,0.10)' : 'rgba(255,255,255,0.04)',
-                        border: `1px solid ${formData.market === opt ? '#FFC500' : 'rgba(255,255,255,0.10)'}`,
+                        background: formData.market === opt ? 'rgba(201,168,76,0.10)' : 'rgba(255,255,255,0.04)',
+                        border: `1px solid ${formData.market === opt ? '#C9A84C' : 'rgba(255,255,255,0.10)'}`,
                         borderRadius: '12px',
                         padding: '14px 16px',
-                        color: formData.market === opt ? '#FFC500' : '#F8FAFC',
+                        color: formData.market === opt ? '#C9A84C' : '#F8FAFC',
                         fontSize: '14px',
                         fontWeight: 500,
                         textAlign: 'left',
@@ -230,9 +230,9 @@ function DiagnosticForm() {
                           width: '16px',
                           height: '16px',
                           borderRadius: '50%',
-                          border: `2px solid ${formData.market === opt ? '#FFC500' : 'rgba(255,255,255,0.25)'}`,
+                          border: `2px solid ${formData.market === opt ? '#C9A84C' : 'rgba(255,255,255,0.25)'}`,
                           flexShrink: 0,
-                          background: formData.market === opt ? '#FFC500' : 'transparent',
+                          background: formData.market === opt ? '#C9A84C' : 'transparent',
                           transition: 'all 0.2s',
                         }}
                       />
@@ -251,11 +251,11 @@ function DiagnosticForm() {
                       onClick={() => setFormData(d => ({ ...d, payment: opt }))}
                       style={{
                         width: '100%',
-                        background: formData.payment === opt ? 'rgba(255,197,0,0.10)' : 'rgba(255,255,255,0.04)',
-                        border: `1px solid ${formData.payment === opt ? '#FFC500' : 'rgba(255,255,255,0.10)'}`,
+                        background: formData.payment === opt ? 'rgba(201,168,76,0.10)' : 'rgba(255,255,255,0.04)',
+                        border: `1px solid ${formData.payment === opt ? '#C9A84C' : 'rgba(255,255,255,0.10)'}`,
                         borderRadius: '12px',
                         padding: '14px 16px',
-                        color: formData.payment === opt ? '#FFC500' : '#F8FAFC',
+                        color: formData.payment === opt ? '#C9A84C' : '#F8FAFC',
                         fontSize: '14px',
                         fontWeight: 500,
                         textAlign: 'left',
@@ -271,9 +271,9 @@ function DiagnosticForm() {
                           width: '16px',
                           height: '16px',
                           borderRadius: '50%',
-                          border: `2px solid ${formData.payment === opt ? '#FFC500' : 'rgba(255,255,255,0.25)'}`,
+                          border: `2px solid ${formData.payment === opt ? '#C9A84C' : 'rgba(255,255,255,0.25)'}`,
                           flexShrink: 0,
-                          background: formData.payment === opt ? '#FFC500' : 'transparent',
+                          background: formData.payment === opt ? '#C9A84C' : 'transparent',
                           transition: 'all 0.2s',
                         }}
                       />
@@ -292,11 +292,11 @@ function DiagnosticForm() {
                       onClick={() => setFormData(d => ({ ...d, revenue: opt }))}
                       style={{
                         width: '100%',
-                        background: formData.revenue === opt ? 'rgba(0,159,173,0.12)' : 'rgba(255,255,255,0.04)',
-                        border: `1px solid ${formData.revenue === opt ? '#009FAD' : 'rgba(255,255,255,0.10)'}`,
+                        background: formData.revenue === opt ? 'rgba(30,79,160,0.12)' : 'rgba(255,255,255,0.04)',
+                        border: `1px solid ${formData.revenue === opt ? '#1E4FA0' : 'rgba(255,255,255,0.10)'}`,
                         borderRadius: '12px',
                         padding: '14px 16px',
-                        color: formData.revenue === opt ? '#009FAD' : '#F8FAFC',
+                        color: formData.revenue === opt ? '#1E4FA0' : '#F8FAFC',
                         fontSize: '14px',
                         fontWeight: 500,
                         textAlign: 'left',
@@ -312,9 +312,9 @@ function DiagnosticForm() {
                           width: '16px',
                           height: '16px',
                           borderRadius: '50%',
-                          border: `2px solid ${formData.revenue === opt ? '#009FAD' : 'rgba(255,255,255,0.25)'}`,
+                          border: `2px solid ${formData.revenue === opt ? '#1E4FA0' : 'rgba(255,255,255,0.25)'}`,
                           flexShrink: 0,
-                          background: formData.revenue === opt ? '#009FAD' : 'transparent',
+                          background: formData.revenue === opt ? '#1E4FA0' : 'transparent',
                           transition: 'all 0.2s',
                         }}
                       />
@@ -352,8 +352,8 @@ function DiagnosticForm() {
               style={{
                 flex: 1,
                 background: step === totalSteps
-                  ? (canProceed() ? '#009FAD' : 'rgba(0,159,173,0.35)')
-                  : (canProceed() ? '#FFC500' : 'rgba(255,197,0,0.30)'),
+                  ? (canProceed() ? '#1E4FA0' : 'rgba(30,79,160,0.35)')
+                  : (canProceed() ? '#C9A84C' : 'rgba(201,168,76,0.30)'),
                 color: step === totalSteps ? '#fff' : '#050816',
                 border: 'none',
                 borderRadius: '999px',
@@ -387,7 +387,7 @@ export default function Contato() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   usePageMeta({
-    title: `${t('contato.label')} | XSCALES`,
+    title: `${t('contato.label')} | Spayse`,
     description: t('contato.subtitle'),
   });
 
@@ -424,9 +424,9 @@ export default function Contato() {
               >
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
-                  style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.18)' }}
+                  style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.18)' }}
                 >
-                  <b.icon size={18} style={{ color: '#FFC500' }} />
+                  <b.icon size={18} style={{ color: '#C9A84C' }} />
                 </div>
                 <h3 className="text-sm font-semibold text-white mb-2">{b.title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: 'rgba(248,250,252,0.55)' }}>
@@ -461,9 +461,9 @@ export default function Contato() {
                   <div key={i} className="flex items-center gap-2.5">
                     <div
                       className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(0,159,173,0.15)', border: '1px solid rgba(0,159,173,0.30)' }}
+                      style={{ background: 'rgba(30,79,160,0.15)', border: '1px solid rgba(30,79,160,0.30)' }}
                     >
-                      <CheckCircle size={11} style={{ color: '#009FAD' }} />
+                      <CheckCircle size={11} style={{ color: '#1E4FA0' }} />
                     </div>
                     <span className="text-sm" style={{ color: 'rgba(248,250,252,0.70)' }}>{item}</span>
                   </div>

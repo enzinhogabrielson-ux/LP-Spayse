@@ -40,7 +40,7 @@ export default function FeatureList({ items, columns = 1 }: FeatureListProps) {
         >
           <CheckCircle
             size={16}
-            style={{ color: '#FFC500', flexShrink: 0, marginTop: '3px' }}
+            style={{ color: '#C9A84C', flexShrink: 0, marginTop: '3px' }}
           />
           {item}
         </motion.li>

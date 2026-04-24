@@ -16,6 +16,8 @@ import { blogPosts } from '@/data/blog';
 import { metrics } from '@/data/company';
 import { getLang } from '@/lib/lang';
 import { tr } from '@/lib/i18n';
+import GlobeAnimation from '@/components/common/GlobeAnimation';
+
 
 const lang = getLang();
 
@@ -31,9 +33,9 @@ const homeLocalizedCopy = {
     es: 'Lleva tu operación a una estructura preparada para crecer',
   },
   finalDesc: {
-    pt: 'Fale com a XSCALES e descubra como simplificar fluxos, consolidar operações e avançar com mais inteligência.',
-    en: 'Talk to XSCALES and discover how to simplify flows, consolidate operations and move forward with more intelligence.',
-    es: 'Habla con XSCALES y descubre cómo simplificar flujos, consolidar operaciones y avanzar con más inteligencia.',
+    pt: 'Fale com a Spayse e descubra como simplificar fluxos, consolidar operações e avançar com mais inteligência.',
+    en: 'Talk to Spayse and discover how to simplify flows, consolidate operations and move forward with more intelligence.',
+    es: 'Habla con Spayse y descubre cómo simplificar flujos, consolidar operaciones y avanzar con más inteligencia.',
   },
 };
 
@@ -56,19 +58,19 @@ function HeroSection() {
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           style={{ width: '100%', height: '100%' }}
-          title="animxscales2"
+          title="animspayse2"
         />
       </motion.div>
 
       {/* Conteúdo esquerdo com padding próprio */}
-      <div className="relative pt-24 pb-20 md:pt-36 md:pb-32">
+      <div className="relative pt-28 pb-12 md:pt-32 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left">
             <motion.span
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="badge-teal mb-6 self-center md:self-start"
+              className="badge-sapphire mb-4 self-center md:self-start"
             >
               {tr('home.heroBadge', lang)}
             </motion.span>
@@ -77,27 +79,27 @@ function HeroSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.08] text-center md:text-left"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.08] text-center md:text-left"
               style={{ letterSpacing: '-0.035em' }}
             >
                <span className="block">{tr('home.heroTitle1', lang)}</span>
                <span className="block">{tr('home.heroTitle2', lang)}</span>
-               <span className="block gradient-text-teal-gold text-glow">{tr('home.heroTitle3', lang)}</span>
+               <span className="block gradient-text-sapphire-gold ">{tr('home.heroTitle3', lang)}</span>
             </motion.h1>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.18 }}
-              className="mt-6 h-px w-12 rounded-full mx-auto md:mx-0"
-              style={{ background: 'linear-gradient(90deg, #009FAD, #FFC500)' }}
+              className="mt-8 h-px w-12 rounded-full mx-auto md:mx-0"
+              style={{ background: 'linear-gradient(90deg, #1E4FA0, #C9A84C)' }}
             />
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.22 }}
-              className="mt-5 text-base md:text-lg leading-relaxed text-muted-62 max-w-md mx-auto md:mx-0 text-center md:text-left"
+              className="mt-8 text-sm md:text-base leading-relaxed text-muted-62 max-w-md mx-auto md:mx-0 text-center md:text-left"
             >
               {tr('home.heroDesc', lang)}
             </motion.p>
@@ -106,12 +108,12 @@ function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.32 }}
-              className="mt-9 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start w-full sm:w-auto"
+              className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start w-full sm:w-auto"
             >
-              <Button href="/contato" variant="primary" size="lg" data-testid="link-hero-primary">
+              <Button href="/contato" variant="animated" data-testid="link-hero-primary">
                 {tr('home.heroCta1', lang)}
               </Button>
-              <Button href="/solucoes" variant="secondary" size="lg" data-testid="link-hero-secondary">
+              <Button href="/solucoes" variant="shinery" data-testid="link-hero-secondary">
                 {tr('home.heroCta2', lang)}
               </Button>
             </motion.div>
@@ -131,7 +133,7 @@ function HeroSection() {
                   tr('home.stat4', lang),
                 ];
                 return (
-                  <div key={i} className="bg-xscales">
+                  <div key={i} className="bg-navy-deep">
                     <MetricCard value={m.value} label={statLabels[i] || m.label} index={i} animateValue compact />
                   </div>
                 );
@@ -217,7 +219,7 @@ function ValuePropositionSection() {
                 <span
                   className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider"
                   style={{
-                    background: 'rgba(0,159,173,0.85)',
+                    background: 'rgba(30,79,160,0.85)',
                     backdropFilter: 'blur(8px)',
                     color: '#fff',
                     letterSpacing: '0.06em',
@@ -240,7 +242,7 @@ function ValuePropositionSection() {
                 {/* Accent divider */}
                 <div
                   className="mb-3 h-0.5 w-8 rounded-full"
-                  style={{ background: 'linear-gradient(90deg, #009FAD, #FFC500)' }}
+                  style={{ background: 'linear-gradient(90deg, #1E4FA0, #C9A84C)' }}
                 />
                 <div
                   className="text-lg font-bold mb-2 leading-snug"
@@ -265,7 +267,7 @@ function ValuePropositionSection() {
 
 function SolutionsSection() {
   return (
-    <section className="py-24 md:py-32 bg-xscales">
+    <section className="py-24 md:py-32 bg-navy-deep">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label={tr('home.solLabel', lang)}
@@ -339,15 +341,15 @@ function PlatformExperienceSection() {
           <div
             className="absolute inset-x-10 -top-8 h-24 blur-3xl"
             style={{
-              background: 'radial-gradient(circle, rgba(0,159,173,0.2) 0%, rgba(255,197,0,0.15) 45%, transparent 75%)',
+              background: 'radial-gradient(circle, rgba(30,79,160,0.2) 0%, rgba(201,168,76,0.15) 45%, transparent 75%)',
             }}
             aria-hidden="true"
           />
 
           <div className="relative overflow-hidden rounded-[32px] border border-subtle bg-[linear-gradient(180deg,rgba(11,16,32,0.96)_0%,rgba(8,14,26,0.98)_100%)] p-3 md:p-4 shadow-[0_36px_90px_-58px_rgba(0,0,0,0.96)]">
             <img
-              src="/images/platform-dashboard-home.jpeg"
-              alt="Interface administrativa da XSCALES exibindo saldo em carteira, vendas do dia, conversão e saúde financeira."
+              src="/images/platform-dashboard-home.png"
+              alt="Interface administrativa da Spayse exibindo saldo em carteira, vendas do dia, conversão e saúde financeira."
               className="w-full rounded-[24px] border border-white/6 object-cover"
               loading="lazy"
             />
@@ -365,7 +367,7 @@ function PlatformExperienceSection() {
                   transition={{ duration: 0.45, delay: 0.12 + index * 0.08 }}
                   className="rounded-2xl border border-subtle bg-surface px-5 py-5"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-08 text-primary-gold">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-08 text-accent-gold">
                     <Icon size={18} />
                   </div>
                   <h3 className="mt-4 text-base font-semibold text-white">{item.title}</h3>
@@ -406,9 +408,9 @@ function MarketsSection() {
           title={tr('home.mkTitle', lang)}
           subtitle={tr('home.mkSub', lang)}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-4">
           {overviewMarkets.map((m, i) => (
-            <div key={m.id} className="w-full max-w-[320px] sm:max-w-none">
+            <div key={m.id} className="w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] xl:w-[calc(20%-13px)]">
               <MarketCard market={m} index={i} />
             </div>
           ))}
@@ -479,12 +481,12 @@ function SecuritySection() {
           >
             <div
               className="absolute inset-x-10 top-1/2 h-24 -translate-y-1/2 blur-3xl"
-              style={{ background: 'radial-gradient(circle, rgba(0,159,173,0.14) 0%, rgba(255,197,0,0.12) 52%, transparent 78%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(30,79,160,0.14) 0%, rgba(201,168,76,0.12) 52%, transparent 78%)' }}
               aria-hidden="true"
             />
             <img
               src="/images/item3-security.png"
-              alt="Ecossistema visual da XSCALES conectando Pix, PayPal, crédito, boleto, débito, relatórios e saque em uma única infraestrutura."
+              alt="Ecossistema visual da Spayse conectando Pix, PayPal, crédito, boleto, débito, relatórios e saque em uma única infraestrutura."
               className="w-full object-cover"
               loading="lazy"
             />
@@ -516,7 +518,7 @@ function DevelopersSection() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4 }}
-                className="badge-teal mb-5 self-center md:self-start"
+                className="badge-sapphire mb-5 self-center md:self-start"
               >
                 {tr('home.devBadge', lang)}
               </motion.span>
@@ -527,7 +529,7 @@ function DevelopersSection() {
                 className="text-3xl md:text-4xl font-bold mb-4 text-center md:text-left"
                 style={{ letterSpacing: '-0.025em' }}
               >
-                <span className="gradient-text-teal-gold">{tr('home.devTitle1', lang)}</span>
+                <span className="gradient-text-sapphire-gold">{tr('home.devTitle1', lang)}</span>
                 <span className="text-white">{tr('home.devTitle2', lang)}</span>
               </motion.h2>
               <motion.p
@@ -544,7 +546,7 @@ function DevelopersSection() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex justify-center md:justify-start"
               >
-                <a href="/desenvolvedores" className="btn-teal inline-flex items-center gap-2" data-testid="link-developers-cta">
+                <a href="/desenvolvedores" className="btn-sapphire inline-flex items-center gap-2" data-testid="link-developers-cta">
                   {tr('home.devCta', lang)}
                 </a>
               </motion.div>
@@ -557,18 +559,11 @@ function DevelopersSection() {
               className="relative"
             >
               <div className="flex justify-center">
-                <video
-                  src="/animxsc.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  aria-hidden="true"
-                  style={{
-                    width: '72%',
-                    objectFit: 'contain',
-                  }}
-                />
+                <div className="w-full aspect-square lg:aspect-[4/3] rounded-2xl bg-navy-mid flex items-center justify-center border border-subtle overflow-hidden relative">
+                  <div className="absolute inset-0 flex items-center justify-center w-full h-full mix-blend-screen opacity-90" style={{ transform: 'scale(1.2)' }}>
+                    <GlobeAnimation />
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -675,9 +670,9 @@ function DiagnosticForm() {
         >
           <div
             className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5"
-            style={{ background: 'rgba(0,159,173,0.15)', border: '1px solid rgba(0,159,173,0.35)' }}
+            style={{ background: 'rgba(30,79,160,0.15)', border: '1px solid rgba(30,79,160,0.35)' }}
           >
-            <CheckCircle size={32} style={{ color: '#009FAD' }} />
+            <CheckCircle size={32} style={{ color: '#1E4FA0' }} />
           </div>
           <div className="text-xl font-bold text-white mb-3" role="heading" aria-level={3} style={{ color: '#fff' }}>{tr('form.successTitle', lang)}</div>
           <div className="text-sm leading-relaxed" style={{ color: 'rgba(248,250,252,0.62)' }}>
@@ -695,7 +690,7 @@ function DiagnosticForm() {
                   flex: 1,
                   height: '3px',
                   borderRadius: '99px',
-                  background: s.id <= step ? '#009FAD' : 'rgba(255,255,255,0.12)',
+                  background: s.id <= step ? '#1E4FA0' : 'rgba(255,255,255,0.12)',
                   transition: 'background 0.4s ease',
                 }}
               />
@@ -715,15 +710,15 @@ function DiagnosticForm() {
               <div className="flex items-start gap-3 mb-5">
                 <div
                   style={{
-                    background: 'rgba(0,159,173,0.12)',
-                    border: '1px solid rgba(0,159,173,0.25)',
+                    background: 'rgba(30,79,160,0.12)',
+                    border: '1px solid rgba(30,79,160,0.25)',
                     borderRadius: '10px',
                     padding: '8px',
                     flexShrink: 0,
                     marginTop: '2px',
                   }}
                 >
-                  <StepIcon size={18} style={{ color: '#009FAD' }} />
+                  <StepIcon size={18} style={{ color: '#1E4FA0' }} />
                 </div>
                 <div>
                   <div className="text-xl font-bold text-white" style={{ letterSpacing: '-0.02em', color: '#fff' }} role="heading" aria-level={3}>
@@ -745,7 +740,7 @@ function DiagnosticForm() {
                       placeholder={tr('form.namePlaceholder', lang)}
                       value={formData.name}
                       onChange={e => setFormData(d => ({ ...d, name: e.target.value }))}
-                      onFocus={e => { e.currentTarget.style.borderColor = '#FFC500'; }}
+                      onFocus={e => { e.currentTarget.style.borderColor = '#C9A84C'; }}
                       onBlur={e => { e.currentTarget.style.borderColor = errors.name ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       style={{ ...inputBase, borderColor: errors.name ? '#ef4444' : 'rgba(255,255,255,0.10)' }}
                       data-testid="diag-input-name"
@@ -761,7 +756,7 @@ function DiagnosticForm() {
                       placeholder="(00) 00000-0000"
                       value={formData.whatsapp}
                       onChange={e => setFormData(d => ({ ...d, whatsapp: formatPhone(e.target.value) }))}
-                      onFocus={e => { e.currentTarget.style.borderColor = '#FFC500'; }}
+                      onFocus={e => { e.currentTarget.style.borderColor = '#C9A84C'; }}
                       onBlur={e => { e.currentTarget.style.borderColor = errors.whatsapp ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       style={{ ...inputBase, borderColor: errors.whatsapp ? '#ef4444' : 'rgba(255,255,255,0.10)' }}
                       data-testid="diag-input-whatsapp"
@@ -779,11 +774,11 @@ function DiagnosticForm() {
                       key={opt}
                       onClick={() => setFormData(d => ({ ...d, market: opt }))}
                       style={{
-                        background: formData.market === opt ? 'rgba(255,197,0,0.10)' : 'rgba(255,255,255,0.04)',
-                        border: `1px solid ${formData.market === opt ? '#FFC500' : 'rgba(255,255,255,0.10)'}`,
+                        background: formData.market === opt ? 'rgba(201,168,76,0.10)' : 'rgba(255,255,255,0.04)',
+                        border: `1px solid ${formData.market === opt ? '#C9A84C' : 'rgba(255,255,255,0.10)'}`,
                         borderRadius: '12px',
                         padding: '14px 16px',
-                        color: formData.market === opt ? '#FFC500' : '#F8FAFC',
+                        color: formData.market === opt ? '#C9A84C' : '#F8FAFC',
                         fontSize: '14px',
                         fontWeight: 500,
                         textAlign: 'left',
@@ -800,9 +795,9 @@ function DiagnosticForm() {
                           width: '16px',
                           height: '16px',
                           borderRadius: '50%',
-                          border: `2px solid ${formData.market === opt ? '#FFC500' : 'rgba(255,255,255,0.25)'}`,
+                          border: `2px solid ${formData.market === opt ? '#C9A84C' : 'rgba(255,255,255,0.25)'}`,
                           flexShrink: 0,
-                          background: formData.market === opt ? '#FFC500' : 'transparent',
+                          background: formData.market === opt ? '#C9A84C' : 'transparent',
                           transition: 'all 0.2s',
                         }}
                       />
@@ -821,11 +816,11 @@ function DiagnosticForm() {
                       onClick={() => setFormData(d => ({ ...d, payment: opt }))}
                       style={{
                         width: '100%',
-                        background: formData.payment === opt ? 'rgba(255,197,0,0.10)' : 'rgba(255,255,255,0.04)',
-                        border: `1px solid ${formData.payment === opt ? '#FFC500' : 'rgba(255,255,255,0.10)'}`,
+                        background: formData.payment === opt ? 'rgba(201,168,76,0.10)' : 'rgba(255,255,255,0.04)',
+                        border: `1px solid ${formData.payment === opt ? '#C9A84C' : 'rgba(255,255,255,0.10)'}`,
                         borderRadius: '12px',
                         padding: '14px 16px',
-                        color: formData.payment === opt ? '#FFC500' : '#F8FAFC',
+                        color: formData.payment === opt ? '#C9A84C' : '#F8FAFC',
                         fontSize: '14px',
                         fontWeight: 500,
                         textAlign: 'left',
@@ -842,9 +837,9 @@ function DiagnosticForm() {
                           width: '16px',
                           height: '16px',
                           borderRadius: '50%',
-                          border: `2px solid ${formData.payment === opt ? '#FFC500' : 'rgba(255,255,255,0.25)'}`,
+                          border: `2px solid ${formData.payment === opt ? '#C9A84C' : 'rgba(255,255,255,0.25)'}`,
                           flexShrink: 0,
-                          background: formData.payment === opt ? '#FFC500' : 'transparent',
+                          background: formData.payment === opt ? '#C9A84C' : 'transparent',
                           transition: 'all 0.2s',
                         }}
                       />
@@ -863,11 +858,11 @@ function DiagnosticForm() {
                       onClick={() => setFormData(d => ({ ...d, revenue: opt }))}
                       style={{
                         width: '100%',
-                        background: formData.revenue === opt ? 'rgba(0,159,173,0.12)' : 'rgba(255,255,255,0.04)',
-                        border: `1px solid ${formData.revenue === opt ? '#009FAD' : 'rgba(255,255,255,0.10)'}`,
+                        background: formData.revenue === opt ? 'rgba(30,79,160,0.12)' : 'rgba(255,255,255,0.04)',
+                        border: `1px solid ${formData.revenue === opt ? '#1E4FA0' : 'rgba(255,255,255,0.10)'}`,
                         borderRadius: '12px',
                         padding: '14px 16px',
-                        color: formData.revenue === opt ? '#009FAD' : '#F8FAFC',
+                        color: formData.revenue === opt ? '#1E4FA0' : '#F8FAFC',
                         fontSize: '14px',
                         fontWeight: 500,
                         textAlign: 'left',
@@ -884,9 +879,9 @@ function DiagnosticForm() {
                           width: '16px',
                           height: '16px',
                           borderRadius: '50%',
-                          border: `2px solid ${formData.revenue === opt ? '#009FAD' : 'rgba(255,255,255,0.25)'}`,
+                          border: `2px solid ${formData.revenue === opt ? '#1E4FA0' : 'rgba(255,255,255,0.25)'}`,
                           flexShrink: 0,
-                          background: formData.revenue === opt ? '#009FAD' : 'transparent',
+                          background: formData.revenue === opt ? '#1E4FA0' : 'transparent',
                           transition: 'all 0.2s',
                         }}
                       />
@@ -924,8 +919,8 @@ function DiagnosticForm() {
               style={{
                 flex: 1,
                 background: step === totalSteps
-                  ? (canProceed() ? '#009FAD' : 'rgba(0,159,173,0.35)')
-                  : (canProceed() ? '#FFC500' : 'rgba(255,197,0,0.30)'),
+                  ? (canProceed() ? '#1E4FA0' : 'rgba(30,79,160,0.35)')
+                  : (canProceed() ? '#C9A84C' : 'rgba(201,168,76,0.30)'),
                 color: step === totalSteps ? '#fff' : '#050816',
                 border: 'none',
                 borderRadius: '999px',
@@ -984,9 +979,9 @@ function PartnersSection() {
                 <div key={i} className="flex items-center gap-2.5">
                   <div
                     className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(0,159,173,0.15)', border: '1px solid rgba(0,159,173,0.30)' }}
+                    style={{ background: 'rgba(30,79,160,0.15)', border: '1px solid rgba(30,79,160,0.30)' }}
                   >
-                    <CheckCircle size={11} style={{ color: '#009FAD' }} />
+                    <CheckCircle size={11} style={{ color: '#1E4FA0' }} />
                   </div>
                   <span className="text-sm" style={{ color: '#475569' }}>{item}</span>
                 </div>
@@ -1013,18 +1008,18 @@ function CTASection() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="py-24 md:py-32 bg-xscales">
+    <section ref={ref} className="py-24 md:py-32 bg-navy-deep">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-2xl p-12 md:p-16 text-center bg-gradient-to-br from-surface to-elevated border border-teal-20"
+          className="relative overflow-hidden rounded-2xl p-12 md:p-16 text-center bg-gradient-to-br from-surface to-elevated border border-sapphire-20"
         >
           <div
             className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] pointer-events-none"
             style={{
-              background: 'radial-gradient(ellipse, rgba(0,159,173,0.10) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(30,79,160,0.10) 0%, transparent 70%)',
               filter: 'blur(50px)',
             }}
             aria-hidden="true"
@@ -1032,7 +1027,7 @@ function CTASection() {
           <div
             className="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] pointer-events-none"
             style={{
-              background: 'radial-gradient(ellipse, rgba(255,197,0,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%)',
               filter: 'blur(50px)',
             }}
             aria-hidden="true"
@@ -1042,7 +1037,7 @@ function CTASection() {
               Leve sua operação para uma estrutura preparada para crescer
             </h2>
             <p className="text-lg mb-10 max-w-2xl mx-auto text-muted-62">
-              Fale com a XSCALES e descubra como simplificar fluxos, consolidar operações e avançar com mais inteligência.
+              Fale com a Spayse e descubra como simplificar fluxos, consolidar operações e avançar com mais inteligência.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Button href="/contato" variant="primary" size="lg" data-testid="link-final-cta-primary">
@@ -1100,12 +1095,12 @@ function LocalizedCTASection() {
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-2xl p-12 md:p-16 text-center bg-gradient-to-br from-surface to-elevated border border-teal-20"
+          className="relative overflow-hidden rounded-2xl p-12 md:p-16 text-center bg-gradient-to-br from-surface to-elevated border border-sapphire-20"
         >
           <div
             className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] pointer-events-none"
             style={{
-              background: 'radial-gradient(ellipse, rgba(0,159,173,0.10) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(30,79,160,0.10) 0%, transparent 70%)',
               filter: 'blur(50px)',
             }}
             aria-hidden="true"
@@ -1113,7 +1108,7 @@ function LocalizedCTASection() {
           <div
             className="absolute top-1/2 right-1/4 translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] pointer-events-none"
             style={{
-              background: 'radial-gradient(ellipse, rgba(255,197,0,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse, rgba(201,168,76,0.08) 0%, transparent 70%)',
               filter: 'blur(50px)',
             }}
             aria-hidden="true"
@@ -1144,8 +1139,8 @@ export default function Home() {
     description: tr('home.metaDesc', lang),
   });
   usePageMeta({
-    title: 'XSCALES | Infraestrutura Financeira para Escala Global',
-    description: 'A XSCALES conecta pagamentos, banking e operação internacional em uma única estrutura tecnológica, preparada para mercados locais e expansão global.',
+    title: 'Spayse | Infraestrutura Financeira para Escala Global',
+    description: 'A Spayse conecta pagamentos, banking e operação internacional em uma única estrutura tecnológica, preparada para mercados locais e expansão global.',
   });
 
   usePageMeta({

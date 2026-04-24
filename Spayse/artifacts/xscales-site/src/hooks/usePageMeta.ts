@@ -38,7 +38,7 @@ export function usePageMeta({ title, description }: PageMetaOptions) {
     }
 
     return () => {
-      document.title = 'XSCALES | Infraestrutura Financeira para Escala Global';
+      document.title = 'Spayse | Infraestrutura Financeira para Escala Global';
     };
   }, [title, description]);
 }

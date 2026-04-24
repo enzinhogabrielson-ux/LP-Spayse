@@ -13,15 +13,15 @@ interface CTAButtonProps {
 
 const variantStyles: Record<string, React.CSSProperties> = {
   primary: {
-    background: '#FFC500',
+    background: '#C9A84C',
     color: '#050816',
     border: 'none',
-    boxShadow: '0 0 28px rgba(255,197,0,0.20)',
+    boxShadow: '0 0 28px rgba(201,168,76,0.20)',
   },
   outline: {
     background: 'transparent',
-    color: '#FFC500',
-    border: '1px solid rgba(255,197,0,0.40)',
+    color: '#C9A84C',
+    border: '1px solid rgba(201,168,76,0.40)',
   },
   ghost: {
     background: 'transparent',
@@ -64,11 +64,11 @@ export default function CTAButton({
   const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
     const el = e.currentTarget as HTMLElement;
     if (variant === 'primary') {
-      el.style.background = '#FFC500';
+      el.style.background = '#C9A84C';
       el.style.transform = 'translateY(-1px)';
     } else if (variant === 'outline') {
-      el.style.borderColor = '#FFC500';
-      el.style.background = 'rgba(255,197,0,0.06)';
+      el.style.borderColor = '#C9A84C';
+      el.style.background = 'rgba(201,168,76,0.06)';
     } else {
       el.style.color = 'rgba(248,250,252,0.90)';
     }
@@ -77,10 +77,10 @@ export default function CTAButton({
   const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
     const el = e.currentTarget as HTMLElement;
     if (variant === 'primary') {
-      el.style.background = '#FFC500';
+      el.style.background = '#C9A84C';
       el.style.transform = '';
     } else if (variant === 'outline') {
-      el.style.borderColor = 'rgba(255,197,0,0.40)';
+      el.style.borderColor = 'rgba(201,168,76,0.40)';
       el.style.background = 'transparent';
     } else {
       el.style.color = 'rgba(248,250,252,0.70)';

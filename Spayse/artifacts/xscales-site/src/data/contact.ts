@@ -16,26 +16,26 @@ export interface ContactOffice {
 export const contactChannels: ContactChannel[] = [
   {
     label: 'E-mail Comercial',
-    value: 'comercial@xscales.com',
-    href: 'mailto:comercial@xscales.com',
+    value: 'comercial@spayse.com',
+    href: 'mailto:comercial@spayse.com',
     description: 'Para propostas, parcerias e novos negócios.',
   },
   {
     label: 'Suporte Técnico',
-    value: 'suporte@xscales.com',
-    href: 'mailto:suporte@xscales.com',
+    value: 'suporte@spayse.com',
+    href: 'mailto:suporte@spayse.com',
     description: 'Atendimento técnico para clientes ativos.',
   },
   {
     label: 'Compliance & Regulatório',
-    value: 'compliance@xscales.com',
-    href: 'mailto:compliance@xscales.com',
+    value: 'compliance@spayse.com',
+    href: 'mailto:compliance@spayse.com',
     description: 'Questões regulatórias, auditoria e licenciamento.',
   },
   {
     label: 'Imprensa & Mídia',
-    value: 'midia@xscales.com',
-    href: 'mailto:midia@xscales.com',
+    value: 'midia@spayse.com',
+    href: 'mailto:midia@spayse.com',
     description: 'Assessoria de imprensa, entrevistas e conteúdo editorial.',
   },
 ];
@@ -44,20 +44,20 @@ export const contactOffices: ContactOffice[] = [
   {
     city: 'São Paulo',
     country: 'Brasil',
-    address: 'Av. Brigadeiro Faria Lima, 3477 — Itaim Bibi, SP 04538-133',
-    phone: '+55 11 3030-0000',
+    address: '[A definir]',
+    phone: '[A definir]',
     timezone: 'UTC-3',
   },
   {
     city: 'Cidade do México',
     country: 'México',
-    address: 'Paseo de la Reforma 250, Cuauhtémoc, CDMX 06600',
+    address: '[A definir]',
     timezone: 'UTC-6',
   },
   {
     city: 'Bogotá',
     country: 'Colômbia',
-    address: 'Carrera 7 #71-21, Oficina 801 — Chapinero, Bogotá',
+    address: '[A definir]',
     timezone: 'UTC-5',
   },
 ];

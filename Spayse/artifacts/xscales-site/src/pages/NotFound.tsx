@@ -22,7 +22,7 @@ export default function NotFound() {
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse, rgba(255,197,0,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(201,168,76,0.07) 0%, transparent 70%)',
           filter: 'blur(60px)',
         }}
         aria-hidden="true"
@@ -37,8 +37,8 @@ export default function NotFound() {
           <div
             className="text-8xl md:text-[10rem] lg:text-[14rem] font-black leading-none mb-4 select-none"
             style={{
-              color: '#FFC500',
-              textShadow: '0 0 60px rgba(255,197,0,0.30), 0 0 120px rgba(255,197,0,0.10)',
+              color: '#C9A84C',
+              textShadow: '0 0 60px rgba(201,168,76,0.30), 0 0 120px rgba(201,168,76,0.10)',
               letterSpacing: '-0.05em',
             }}
           >
@@ -65,16 +65,16 @@ export default function NotFound() {
             <button
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
               style={{
-                background: '#FFC500',
+                background: '#C9A84C',
                 color: '#050816',
-                boxShadow: '0 0 28px rgba(255,197,0,0.25)',
+                boxShadow: '0 0 28px rgba(201,168,76,0.25)',
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.background = '#FFC500';
+                (e.currentTarget as HTMLButtonElement).style.background = '#C9A84C';
                 (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)';
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLButtonElement).style.background = '#FFC500';
+                (e.currentTarget as HTMLButtonElement).style.background = '#C9A84C';
                 (e.currentTarget as HTMLButtonElement).style.transform = '';
               }}
             >

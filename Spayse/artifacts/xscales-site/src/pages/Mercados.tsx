@@ -16,7 +16,7 @@ export default function Mercados() {
   const ref = useRef(null);
 
   usePageMeta({
-    title: `${t('mkList.label')} | XSCALES`,
+    title: `${t('mkList.label')} | Spayse`,
     description: t('mkList.subtitle'),
   });
 
@@ -87,12 +87,12 @@ export default function Mercados() {
             <button
               className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200"
               style={{
-                border: '1px solid rgba(255,197,0,0.30)',
-                color: '#FFC500',
+                border: '1px solid rgba(201,168,76,0.30)',
+                color: '#C9A84C',
                 background: 'transparent',
               }}
               onMouseEnter={(event) => {
-                (event.currentTarget as HTMLButtonElement).style.background = 'rgba(255,197,0,0.08)';
+                (event.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.08)';
               }}
               onMouseLeave={(event) => {
                 (event.currentTarget as HTMLButtonElement).style.background = 'transparent';

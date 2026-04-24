@@ -9,44 +9,44 @@ export default function Footer() {
   const t = (key: string) => tr(key, lang);
   const socialLabels = {
     linkedin: {
-      pt: 'LinkedIn da XSCALES',
-      en: 'XSCALES LinkedIn',
-      es: 'LinkedIn de XSCALES',
+      pt: 'LinkedIn da Spayse',
+      en: 'Spayse LinkedIn',
+      es: 'LinkedIn de Spayse',
     },
     twitter: {
-      pt: 'Twitter da XSCALES',
-      en: 'XSCALES Twitter',
-      es: 'Twitter de XSCALES',
+      pt: 'Twitter da Spayse',
+      en: 'Spayse Twitter',
+      es: 'Twitter de Spayse',
     },
     instagram: {
-      pt: 'Instagram da XSCALES',
-      en: 'XSCALES Instagram',
-      es: 'Instagram de XSCALES',
+      pt: 'Instagram da Spayse',
+      en: 'Spayse Instagram',
+      es: 'Instagram de Spayse',
     },
   } as const;
 
   return (
-    <footer className="bg-xscales border-t border-subtle-06">
+    <footer className="bg-navy-deep border-t border-subtle-06">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8">
             <div className="lg:col-span-2">
               <div className="mb-4">
-                <img src="/xscalewh.png" alt="XSCALES" className="h-8 object-contain" />
+                <img src="/spayselogo (3).png" alt="Spayse" className="h-8 object-contain" />
               </div>
               <p className="text-sm leading-relaxed mb-6 text-muted-color">{t('footer.tagline')}</p>
               <Link href="/contato" data-testid="link-footer-cta">
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium transition-colors cursor-pointer text-teal-xscales hover:text-primary-gold">
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium transition-colors cursor-pointer text-accent-sapphire hover:text-accent-gold">
                   {t('footer.cta')}
                   <ArrowUpRight size={14} />
                 </span>
               </Link>
               <div className="flex items-center gap-4 mt-6">
                 <a
-                  href="https://linkedin.com/company/xscales"
+                  href="https://linkedin.com/company/spayse"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors text-muted-45 hover:text-teal-xscales focus-ring"
+                  className="transition-colors text-muted-45 hover:text-accent-sapphire focus-ring"
                   data-testid="link-social-linkedin"
                   aria-label={socialLabels.linkedin[lang]}
                 >
@@ -54,10 +54,10 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="https://instagram.com/xscales"
+                  href="https://instagram.com/spayse"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors text-muted-45 hover:text-teal-xscales focus-ring"
+                  className="transition-colors text-muted-45 hover:text-accent-sapphire focus-ring"
                   data-testid="link-social-instagram"
                   aria-label={socialLabels.instagram[lang]}
                 >
@@ -91,7 +91,7 @@ export default function Footer() {
             <button
               type="button"
               className={`px-2 py-1 rounded cursor-pointer transition-colors focus-ring ${
-                lang === 'pt' ? 'text-primary-gold' : 'text-muted-color hover:text-primary-gold'
+                lang === 'pt' ? 'text-accent-gold' : 'text-muted-color hover:text-accent-gold'
               }`}
               data-testid="button-lang-ptbr"
               aria-label="Portuguese"
@@ -108,7 +108,7 @@ export default function Footer() {
             <button
               type="button"
               className={`px-2 py-1 rounded cursor-pointer transition-colors focus-ring ${
-                lang === 'en' ? 'text-primary-gold' : 'text-muted-color hover:text-primary-gold'
+                lang === 'en' ? 'text-accent-gold' : 'text-muted-color hover:text-accent-gold'
               }`}
               data-testid="button-lang-en"
               aria-label="English"
@@ -125,7 +125,7 @@ export default function Footer() {
             <button
               type="button"
               className={`px-2 py-1 rounded cursor-pointer transition-colors focus-ring ${
-                lang === 'es' ? 'text-primary-gold' : 'text-muted-color hover:text-primary-gold'
+                lang === 'es' ? 'text-accent-gold' : 'text-muted-color hover:text-accent-gold'
               }`}
               data-testid="button-lang-es"
               aria-label="Spanish"
@@ -150,15 +150,31 @@ function FooterColumn({ title, links }: { title: string; links: { label: string;
     <nav aria-label={title}>
       <h4 className="text-sm font-semibold text-white mb-4">{title}</h4>
       <ul className="space-y-3">
-        {links.map((link) => (
-          <li key={link.href + link.label}>
-            <Link href={link.href} data-testid={`link-footer-${link.label.toLowerCase().replace(/\s+/g, '-')}`}>
-              <span className="text-sm cursor-pointer transition-colors block text-muted-color hover:text-primary-gold focus-ring">
-                {link.label}
-              </span>
-            </Link>
-          </li>
-        ))}
+        {links.map((link) => {
+          const isPdf = link.href.endsWith('.pdf');
+          
+          return (
+            <li key={link.href + link.label}>
+              {isPdf ? (
+                <a 
+                  href={link.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  data-testid={`link-footer-${link.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  className="text-sm cursor-pointer transition-colors block text-muted-color hover:text-accent-gold focus-ring"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link href={link.href} data-testid={`link-footer-${link.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
+                  <span className="text-sm cursor-pointer transition-colors block text-muted-color hover:text-accent-gold focus-ring">
+                    {link.label}
+                  </span>
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

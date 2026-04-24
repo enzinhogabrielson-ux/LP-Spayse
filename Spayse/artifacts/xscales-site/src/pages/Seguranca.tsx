@@ -23,7 +23,7 @@ const sections = [
   {
     icon: Activity,
     title: 'Monitoramento Contínuo',
-    description: 'A XSCALES opera com sistemas de monitoramento em tempo real que garantem visibilidade completa sobre o estado da infraestrutura e dos fluxos operacionais, permitindo resposta rápida a qualquer anomalia.',
+    description: 'A Spayse opera com sistemas de monitoramento em tempo real que garantem visibilidade completa sobre o estado da infraestrutura e dos fluxos operacionais, permitindo resposta rápida a qualquer anomalia.',
     points: [
       'Monitoramento 24/7 de sistemas e transações',
       'Alertas automáticos para eventos anômalos',
@@ -45,7 +45,7 @@ const sections = [
   {
     icon: Scale,
     title: 'Governança e Conformidade',
-    description: 'A estrutura de governança da XSCALES foi projetada para garantir conformidade com as principais normas e regulamentações aplicáveis aos mercados em que atuamos.',
+    description: 'A estrutura de governança da Spayse foi projetada para garantir conformidade com as principais normas e regulamentações aplicáveis aos mercados em que atuamos.',
     points: [
       'Conformidade com regulamentações locais e internacionais',
       'Políticas internas documentadas e atualizadas',
@@ -71,7 +71,7 @@ export default function Seguranca() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   usePageMeta({
-    title: 'Segurança | XSCALES',
+    title: 'Segurança | Spayse',
     description: 'Criptografia de ponta a ponta, monitoramento em tempo real, zero trust e infraestrutura redundante com alta disponibilidade.',
   });
 
@@ -80,7 +80,7 @@ export default function Seguranca() {
       <PageHero
         label="Segurança"
         title="Segurança e governança como base da operação"
-        subtitle="A XSCALES adota padrões rigorosos de segurança, monitoramento e governança para garantir que cada operação seja realizada com o máximo de integridade e confiabilidade."
+        subtitle="A Spayse adota padrões rigorosos de segurança, monitoramento e governança para garantir que cada operação seja realizada com o máximo de integridade e confiabilidade."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Segurança' }]}
       />
 
@@ -105,9 +105,9 @@ export default function Seguranca() {
                     <div className="flex items-center gap-3 mb-3">
                       <div
                         className="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center"
-                        style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.18)' }}
+                        style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.18)' }}
                       >
-                        <s.icon size={18} style={{ color: '#FFC500' }} />
+                        <s.icon size={18} style={{ color: '#C9A84C' }} />
                       </div>
                       <h3 className="text-base font-bold text-white" style={{ letterSpacing: '-0.02em' }}>
                         {s.title}
@@ -123,7 +123,7 @@ export default function Seguranca() {
                         <div key={pi} className="flex items-start gap-2.5">
                           <div
                             className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2"
-                            style={{ background: '#FFC500' }}
+                            style={{ background: '#C9A84C' }}
                           />
                           <span className="text-sm" style={{ color: 'rgba(248,250,252,0.68)' }}>{p}</span>
                         </div>
@@ -147,8 +147,8 @@ export default function Seguranca() {
             <Link href="/contato" data-testid="link-security-cta">
               <button
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
-                style={{ border: '1px solid rgba(255,197,0,0.30)', color: '#FFC500', background: 'transparent' }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,197,0,0.08)'; }}
+                style={{ border: '1px solid rgba(201,168,76,0.30)', color: '#C9A84C', background: 'transparent' }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.08)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
               >
                 {tr('inst.talkTeam', lang)}

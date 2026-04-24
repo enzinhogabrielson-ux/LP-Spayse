@@ -62,8 +62,8 @@ const gateways: GatewayComparison[] = [
     monthlyFee: 0,
   },
   {
-    name: 'XSCALES',
-    color: '#FFC500',
+    name: 'Spayse',
+    color: '#C9A84C',
     creditFee: 4.99,
     pixFee: 1.99,
     boletoFee: 2.99,
@@ -106,20 +106,20 @@ export default function CostCalculator() {
     revenue: calculateRevenue(gateway),
   })).sort((a, b) => a.totalCost - b.totalCost);
 
-  const xscalesResult = results.find((r) => r.name === 'XSCALES');
-  const xscalesCost = xscalesResult?.totalCost || 0;
-  const xscalesRevenue = xscalesResult?.revenue || 0;
+  const spayseResult = results.find((r) => r.name === 'Spayse');
+  const spayseCost = spayseResult?.totalCost || 0;
+  const spayseRevenue = spayseResult?.revenue || 0;
 
   const worstCost = results[results.length - 1].totalCost;
-  const maxSaving = worstCost - xscalesCost;
-  const maxRevenueGain = xscalesRevenue - results[results.length - 1].revenue;
+  const maxSaving = worstCost - spayseCost;
+  const maxRevenueGain = spayseRevenue - results[results.length - 1].revenue;
 
   return (
     <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: '#050816' }}>
       <div className="absolute inset-0 opacity-30">
         <div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl"
-          style={{ background: 'radial-gradient(circle, rgba(255,197,0,0.15) 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%)' }}
         />
       </div>
 
@@ -130,10 +130,10 @@ export default function CostCalculator() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
-            style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.20)' }}
+            style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.20)' }}
           >
-            <Calculator size={16} style={{ color: '#FFC500' }} />
-            <span className="text-sm font-medium" style={{ color: '#FFC500' }}>
+            <Calculator size={16} style={{ color: '#C9A84C' }} />
+            <span className="text-sm font-medium" style={{ color: '#C9A84C' }}>
               Calculadora de Economia
             </span>
           </motion.div>
@@ -157,7 +157,7 @@ export default function CostCalculator() {
             className="text-lg max-w-2xl mx-auto"
             style={{ color: 'rgba(248,250,252,0.68)' }}
           >
-            Descubra quanto você pode economizar migrando para a XSCALES. Compare com as principais plataformas do mercado.
+            Descubra quanto você pode economizar migrando para a Spayse. Compare com as principais plataformas do mercado.
           </motion.p>
         </div>
 
@@ -175,7 +175,7 @@ export default function CostCalculator() {
               onClick={() => setActiveTab('custos')}
               className="px-8 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
               style={{
-                background: activeTab === 'custos' ? '#FFC500' : 'transparent',
+                background: activeTab === 'custos' ? '#C9A84C' : 'transparent',
                 color: activeTab === 'custos' ? '#050816' : 'rgba(248,250,252,0.68)',
               }}
             >
@@ -185,7 +185,7 @@ export default function CostCalculator() {
               onClick={() => setActiveTab('faturamento')}
               className="px-8 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
               style={{
-                background: activeTab === 'faturamento' ? '#FFC500' : 'transparent',
+                background: activeTab === 'faturamento' ? '#C9A84C' : 'transparent',
                 color: activeTab === 'faturamento' ? '#050816' : 'rgba(248,250,252,0.68)',
               }}
             >
@@ -211,7 +211,7 @@ export default function CostCalculator() {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <label className="text-sm font-medium text-white">Volume Total (R$)</label>
-                    <span className="text-lg font-bold" style={{ color: '#FFC500' }}>
+                    <span className="text-lg font-bold" style={{ color: '#C9A84C' }}>
                       {volume.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </span>
                   </div>
@@ -224,7 +224,7 @@ export default function CostCalculator() {
                     onChange={(e) => setVolume(Number(e.target.value))}
                     className="w-full h-2 rounded-lg appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, #FFC500 0%, #FFC500 ${((volume - 10000) / (500000 - 10000)) * 100}%, rgba(255,255,255,0.1) ${((volume - 10000) / (500000 - 10000)) * 100}%, rgba(255,255,255,0.1) 100%)`,
+                      background: `linear-gradient(to right, #C9A84C 0%, #C9A84C ${((volume - 10000) / (500000 - 10000)) * 100}%, rgba(255,255,255,0.1) ${((volume - 10000) / (500000 - 10000)) * 100}%, rgba(255,255,255,0.1) 100%)`,
                     }}
                   />
                 </div>
@@ -233,7 +233,7 @@ export default function CostCalculator() {
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <label className="text-sm font-medium text-white">Transações Mensais</label>
-                      <span className="text-lg font-bold" style={{ color: '#FFC500' }}>
+                      <span className="text-lg font-bold" style={{ color: '#C9A84C' }}>
                         {transactions.toLocaleString('pt-BR')}
                       </span>
                     </div>
@@ -246,14 +246,14 @@ export default function CostCalculator() {
                       onChange={(e) => setTransactions(Number(e.target.value))}
                       className="w-full h-2 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #FFC500 0%, #FFC500 ${((transactions - 100) / (10000 - 100)) * 100}%, rgba(255,255,255,0.1) ${((transactions - 100) / (10000 - 100)) * 100}%, rgba(255,255,255,0.1) 100%)`,
+                        background: `linear-gradient(to right, #C9A84C 0%, #C9A84C ${((transactions - 100) / (10000 - 100)) * 100}%, rgba(255,255,255,0.1) ${((transactions - 100) / (10000 - 100)) * 100}%, rgba(255,255,255,0.1) 100%)`,
                       }}
                     />
                   </div>
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <label className="text-sm font-medium text-white">Ticket Médio (R$)</label>
-                      <span className="text-lg font-bold" style={{ color: '#FFC500' }}>
+                      <span className="text-lg font-bold" style={{ color: '#C9A84C' }}>
                         {averageTicket.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                       </span>
                     </div>
@@ -266,18 +266,18 @@ export default function CostCalculator() {
                       onChange={(e) => setAverageTicket(Number(e.target.value))}
                       className="w-full h-2 rounded-lg appearance-none cursor-pointer"
                       style={{
-                        background: `linear-gradient(to right, #FFC500 0%, #FFC500 ${((averageTicket - 10) / (500 - 10)) * 100}%, rgba(255,255,255,0.1) ${((averageTicket - 10) / (500 - 10)) * 100}%, rgba(255,255,255,0.1) 100%)`,
+                        background: `linear-gradient(to right, #C9A84C 0%, #C9A84C ${((averageTicket - 10) / (500 - 10)) * 100}%, rgba(255,255,255,0.1) ${((averageTicket - 10) / (500 - 10)) * 100}%, rgba(255,255,255,0.1) 100%)`,
                       }}
                     />
                   </div>
                   <div
                     className="p-4 rounded-lg"
-                    style={{ background: 'rgba(255,197,0,0.08)', border: '1px solid rgba(255,197,0,0.20)' }}
+                    style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.20)' }}
                   >
                     <div className="text-xs mb-1" style={{ color: 'rgba(248,250,252,0.68)' }}>
                       Faturamento Total Estimado
                     </div>
-                    <div className="text-2xl font-bold" style={{ color: '#FFC500' }}>
+                    <div className="text-2xl font-bold" style={{ color: '#C9A84C' }}>
                       {(transactions * averageTicket).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                     </div>
                   </div>
@@ -300,7 +300,7 @@ export default function CostCalculator() {
                     onChange={(e) => setCreditPercent(Number(e.target.value))}
                     className="w-full h-1.5 rounded-lg appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, #FFC500 0%, #FFC500 ${creditPercent}%, rgba(255,255,255,0.1) ${creditPercent}%, rgba(255,255,255,0.1) 100%)`,
+                      background: `linear-gradient(to right, #C9A84C 0%, #C9A84C ${creditPercent}%, rgba(255,255,255,0.1) ${creditPercent}%, rgba(255,255,255,0.1) 100%)`,
                     }}
                   />
                 </div>
@@ -320,7 +320,7 @@ export default function CostCalculator() {
                     onChange={(e) => setPixPercent(Number(e.target.value))}
                     className="w-full h-1.5 rounded-lg appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, #FFC500 0%, #FFC500 ${pixPercent}%, rgba(255,255,255,0.1) ${pixPercent}%, rgba(255,255,255,0.1) 100%)`,
+                      background: `linear-gradient(to right, #C9A84C 0%, #C9A84C ${pixPercent}%, rgba(255,255,255,0.1) ${pixPercent}%, rgba(255,255,255,0.1) 100%)`,
                     }}
                   />
                 </div>
@@ -340,7 +340,7 @@ export default function CostCalculator() {
                     onChange={(e) => setBoletoPercent(Number(e.target.value))}
                     className="w-full h-1.5 rounded-lg appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, #FFC500 0%, #FFC500 ${boletoPercent}%, rgba(255,255,255,0.1) ${boletoPercent}%, rgba(255,255,255,0.1) 100%)`,
+                      background: `linear-gradient(to right, #C9A84C 0%, #C9A84C ${boletoPercent}%, rgba(255,255,255,0.1) ${boletoPercent}%, rgba(255,255,255,0.1) 100%)`,
                     }}
                   />
                 </div>
@@ -377,14 +377,14 @@ export default function CostCalculator() {
                   transition={{ delay: index * 0.05 }}
                   className="p-4 rounded-xl relative overflow-hidden"
                   style={{
-                    background: result.name === 'XSCALES' ? 'rgba(255,197,0,0.08)' : 'rgba(255,255,255,0.03)',
-                    border: result.name === 'XSCALES' ? '2px solid rgba(255,197,0,0.35)' : '1px solid rgba(255,255,255,0.06)',
+                    background: result.name === 'Spayse' ? 'rgba(201,168,76,0.08)' : 'rgba(255,255,255,0.03)',
+                    border: result.name === 'Spayse' ? '2px solid rgba(201,168,76,0.35)' : '1px solid rgba(255,255,255,0.06)',
                   }}
                 >
-                  {result.name === 'XSCALES' && (
+                  {result.name === 'Spayse' && (
                     <div
                       className="absolute top-2 right-2 px-2 py-0.5 rounded text-xs font-bold"
-                      style={{ background: '#FFC500', color: '#050816' }}
+                      style={{ background: '#C9A84C', color: '#050816' }}
                     >
                       {activeTab === 'custos' ? 'MENOR CUSTO' : 'MAIOR FATURAMENTO'}
                     </div>
@@ -418,13 +418,13 @@ export default function CostCalculator() {
                     Crédito: {result.creditFee}% • PIX: {result.pixFee}% • Boleto: {result.boletoFee}%
                   </div>
 
-                  {result.name !== 'XSCALES' && (
+                  {result.name !== 'Spayse' && (
                     <div className="mt-2 flex items-center gap-1 text-xs" style={{ color: activeTab === 'custos' ? '#ef4444' : '#10b981' }}>
                       <TrendingDown size={12} />
                       <span>
                         {activeTab === 'custos'
-                          ? `+${(result.totalCost - xscalesCost).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} mais caro`
-                          : `-${(xscalesRevenue - result.revenue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} menos`}
+                          ? `+${(result.totalCost - spayseCost).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} mais caro`
+                          : `-${(spayseRevenue - result.revenue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} menos`}
                       </span>
                     </div>
                   )}
@@ -440,22 +440,22 @@ export default function CostCalculator() {
           viewport={{ once: true }}
           className="p-8 rounded-2xl text-center"
           style={{
-            background: 'linear-gradient(135deg, rgba(255,197,0,0.12) 0%, rgba(255,197,0,0.05) 100%)',
-            border: '1px solid rgba(255,197,0,0.20)',
+            background: 'linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.05) 100%)',
+            border: '1px solid rgba(201,168,76,0.20)',
           }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div
               className="w-12 h-12 rounded-full flex items-center justify-center"
-              style={{ background: '#FFC500' }}
+              style={{ background: '#C9A84C' }}
             >
               <Check size={24} style={{ color: '#050816' }} />
             </div>
             <div className="text-left">
               <div className="text-sm" style={{ color: 'rgba(248,250,252,0.68)' }}>
-                {activeTab === 'custos' ? 'Economia Anual com XSCALES' : 'Ganho de Faturamento Anual'}
+                {activeTab === 'custos' ? 'Economia Anual com Spayse' : 'Ganho de Faturamento Anual'}
               </div>
-              <div className="text-3xl font-bold" style={{ color: '#FFC500' }}>
+              <div className="text-3xl font-bold" style={{ color: '#C9A84C' }}>
                 {activeTab === 'custos'
                   ? (maxSaving * 12).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
                   : (maxRevenueGain * 12).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
@@ -464,16 +464,16 @@ export default function CostCalculator() {
           </div>
 
           <p className="text-sm mb-6" style={{ color: 'rgba(248,250,252,0.68)' }}>
-            Migre para a XSCALES e reduza seus custos operacionais sem comprometer a qualidade do serviço.
+            Migre para a Spayse e reduza seus custos operacionais sem comprometer a qualidade do serviço.
           </p>
 
           <a
             href="/contato"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200"
             style={{
-              background: '#FFC500',
+              background: '#C9A84C',
               color: '#050816',
-              boxShadow: '0 0 24px rgba(255,197,0,0.25)',
+              boxShadow: '0 0 24px rgba(201,168,76,0.25)',
             }}
           >
             Falar com especialista

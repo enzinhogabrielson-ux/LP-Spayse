@@ -12,7 +12,7 @@ export default function Midia() {
   const t = (key: string) => tr(key, lang);
   const [activeCategory, setActiveCategory] = useState('all');
   usePageMeta({
-    title: `${t('midia.label')} | XSCALES`,
+    title: `${t('midia.label')} | Spayse`,
     description: t('midia.subtitle'),
   });
 
@@ -41,7 +41,7 @@ export default function Midia() {
                 onClick={() => setActiveCategory(cat.id)}
                 className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200"
                 style={{
-                  background: activeCategory === cat.id ? '#FFC500' : 'rgba(11,16,32,0.80)',
+                  background: activeCategory === cat.id ? '#C9A84C' : 'rgba(11,16,32,0.80)',
                   color: activeCategory === cat.id ? '#050816' : 'rgba(248,250,252,0.65)',
                   border: activeCategory === cat.id ? 'none' : '1px solid rgba(255,255,255,0.08)',
                 }}

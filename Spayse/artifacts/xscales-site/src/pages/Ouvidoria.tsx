@@ -48,8 +48,8 @@ function InputField({ label, error, children }: { label: string; error?: string;
 export default function Ouvidoria() {
   const [submitted, setSubmitted] = useState(false);
   usePageMeta({
-    title: 'Ouvidoria | XSCALES',
-    description: 'Canal oficial de Ouvidoria XSCALES. Registre sua manifestação com sigilo e receba retorno em até 5 dias úteis.',
+    title: 'Ouvidoria | Spayse',
+    description: 'Canal oficial de Ouvidoria Spayse. Registre sua manifestação com sigilo e receba retorno em até 5 dias úteis.',
   });
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<OuvidoriaFormData>({
@@ -72,6 +72,12 @@ export default function Ouvidoria() {
 
       <section className="py-24 md:py-32" style={{ background: '#050816' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* REBRAND-LEGAL: revisar */}
+          <div className="mb-8 p-4 rounded-lg" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+            <p className="text-sm" style={{ color: 'var(--slate-light)' }}>
+              Atualizado em [DATA]. Em [MÊS/ANO], nossa marca foi atualizada de XSCALES para Spayse. A entidade jurídica responsável permanece a mesma. Em caso de dúvida, consulte nosso Compliance.
+            </p>
+          </div>
           <div className="grid lg:grid-cols-3 gap-6 mb-12">
             {[
               { icon: MessageSquare, title: 'Manifestações', desc: 'Reclamações, sugestões, elogios e denúncias são bem-vindas e tratadas com seriedade.' },
@@ -86,9 +92,9 @@ export default function Ouvidoria() {
               >
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center mb-4"
-                  style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.18)' }}
+                  style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.18)' }}
                 >
-                  <item.icon size={18} style={{ color: '#FFC500' }} />
+                  <item.icon size={18} style={{ color: '#C9A84C' }} />
                 </div>
                 <h3 className="text-sm font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: 'rgba(248,250,252,0.60)' }}>{item.desc}</p>
@@ -108,9 +114,9 @@ export default function Ouvidoria() {
                 <div className="text-center py-8">
                   <div
                     className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5"
-                    style={{ background: 'rgba(255,197,0,0.12)', border: '1px solid rgba(255,197,0,0.25)' }}
+                    style={{ background: 'rgba(201,168,76,0.12)', border: '1px solid rgba(201,168,76,0.25)' }}
                   >
-                    <CheckCircle size={24} style={{ color: '#FFC500' }} />
+                    <CheckCircle size={24} style={{ color: '#C9A84C' }} />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3">Manifestação recebida</h3>
                   <p className="text-sm" style={{ color: 'rgba(248,250,252,0.62)' }}>
@@ -129,7 +135,7 @@ export default function Ouvidoria() {
                       type="text"
                       placeholder="Seu nome"
                       style={inputStyles}
-                      onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = '#FFC500'; }}
+                      onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = '#C9A84C'; }}
                       onBlur={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = errors.name ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       data-testid="input-ouvidoria-name"
                     />
@@ -141,7 +147,7 @@ export default function Ouvidoria() {
                       type="email"
                       placeholder="seu@email.com"
                       style={inputStyles}
-                      onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = '#FFC500'; }}
+                      onFocus={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = '#C9A84C'; }}
                       onBlur={(e) => { (e.currentTarget as HTMLInputElement).style.borderColor = errors.email ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       data-testid="input-ouvidoria-email"
                     />
@@ -151,7 +157,7 @@ export default function Ouvidoria() {
                     <select
                       {...register('type')}
                       style={{ ...inputStyles, appearance: 'none' }}
-                      onFocus={(e) => { (e.currentTarget as HTMLSelectElement).style.borderColor = '#FFC500'; }}
+                      onFocus={(e) => { (e.currentTarget as HTMLSelectElement).style.borderColor = '#C9A84C'; }}
                       onBlur={(e) => { (e.currentTarget as HTMLSelectElement).style.borderColor = errors.type ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       data-testid="select-ouvidoria-type"
                     >
@@ -170,7 +176,7 @@ export default function Ouvidoria() {
                       placeholder="Descreva sua manifestação com detalhes..."
                       rows={5}
                       style={{ ...inputStyles, resize: 'vertical' }}
-                      onFocus={(e) => { (e.currentTarget as HTMLTextAreaElement).style.borderColor = '#FFC500'; }}
+                      onFocus={(e) => { (e.currentTarget as HTMLTextAreaElement).style.borderColor = '#C9A84C'; }}
                       onBlur={(e) => { (e.currentTarget as HTMLTextAreaElement).style.borderColor = errors.description ? '#ef4444' : 'rgba(255,255,255,0.10)'; }}
                       data-testid="textarea-ouvidoria-description"
                     />
@@ -185,7 +191,7 @@ export default function Ouvidoria() {
                     disabled={isSubmitting}
                     className="w-full py-3.5 rounded-lg text-sm font-semibold transition-all duration-200"
                     style={{
-                      background: isSubmitting ? 'rgba(255,197,0,0.60)' : '#FFC500',
+                      background: isSubmitting ? 'rgba(201,168,76,0.60)' : '#C9A84C',
                       color: '#050816',
                     }}
                     data-testid="button-submit-ouvidoria"

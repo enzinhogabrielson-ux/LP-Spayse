@@ -943,13 +943,13 @@ export default function MarketPage({ slug }: MarketPageProps) {
   const [, navigate] = useLocation();
 
   usePageMeta({
-    title: market ? `${market.name} | ${t('mkt.breadcrumbMarkets')} | XSCALES` : `${t('mkt.breadcrumbMarkets')} | XSCALES`,
+    title: market ? `${market.name} | ${t('mkt.breadcrumbMarkets')} | Spayse` : `${t('mkt.breadcrumbMarkets')} | Spayse`,
     description: market?.description,
   });
 
   if (!market) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-xscales">
+      <main className="flex min-h-screen items-center justify-center bg-navy-deep">
         <div className="text-center">
           <p className="text-muted-60">{t('mkt.marketNotFound')}</p>
           <div className="mt-4">
@@ -966,7 +966,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
   const payment = market.payment;
 
   return (
-    <main id="main-content" className="bg-xscales text-xscales">
+    <main id="main-content" className="bg-navy-deep text-spayse">
       <section className="relative overflow-hidden border-b border-subtle pb-20 pt-28 md:pb-24 md:pt-36">
         {heroImage ? (
           <>
@@ -990,8 +990,8 @@ export default function MarketPage({ slug }: MarketPageProps) {
         ) : (
           <>
             <div className="grid-pattern absolute inset-0 opacity-80" aria-hidden="true" />
-            <div className="glow-circle -left-24 top-20 h-[240px] w-[240px]" aria-hidden="true" />
-            <div className="glow-circle-teal -right-20 top-1/3 h-[280px] w-[280px]" aria-hidden="true" />
+            <div className="absolute -left-24 top-20 h-[240px] w-[240px] glow-gold" aria-hidden="true" />
+            <div className="absolute -right-20 top-1/3 h-[280px] w-[280px] glow-sapphire" aria-hidden="true" />
           </>
         )}
 
@@ -999,13 +999,13 @@ export default function MarketPage({ slug }: MarketPageProps) {
           <div className="relative max-w-5xl">
             <div className="relative flex flex-col gap-10">
               <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-white/70">
-                <span onClick={() => navigate('/')} className="cursor-pointer transition-colors hover:text-primary-gold">
+                <span onClick={() => navigate('/')} className="cursor-pointer transition-colors hover:text-accent-gold">
                   {t('mkt.breadcrumbHome')}
                 </span>
                 <ChevronRight size={14} />
                 <span
                   onClick={() => navigate('/mercados')}
-                  className="cursor-pointer transition-colors hover:text-primary-gold"
+                  className="cursor-pointer transition-colors hover:text-accent-gold"
                 >
                   {t('mkt.breadcrumbMarkets')}
                 </span>
@@ -1017,7 +1017,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
                   <MarketFlag name={market.name} flagCode={market.flagCode} flagAsset={market.flagAsset} size={68} />
                   <span className="badge-primary-alt">{t('mkt.marketLatam')}</span>
-                  {payment ? <span className="badge-teal">{payment.categories.length} {t('mkt.localCategories')}</span> : null}
+                  {payment ? <span className="badge-sapphire">{payment.categories.length} {t('mkt.localCategories')}</span> : null}
                 </div>
 
                 <h1
@@ -1056,7 +1056,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                       >
                         <p
                           className={`text-2xl font-bold tracking-[-0.03em] md:text-3xl ${
-                            index === 1 ? 'text-teal-xscales' : 'text-primary-gold'
+                            index === 1 ? 'text-accent-sapphire' : 'text-accent-gold'
                           }`}
                         >
                           {item.value}
@@ -1079,7 +1079,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
           return (
             <section
               key={`${market.slug}-section-${section.title}`}
-              className="py-24 md:py-32 bg-xscales border-t border-b border-subtle"
+              className="py-24 md:py-32 bg-navy-deep border-t border-b border-subtle"
             >
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
@@ -1090,13 +1090,13 @@ export default function MarketPage({ slug }: MarketPageProps) {
                   >
                     {section.title}
                   </h2>
-                  {section.lead ? <p className="mt-6 text-xl font-medium leading-relaxed text-primary-gold">{section.lead}</p> : null}
+                  {section.lead ? <p className="mt-6 text-xl font-medium leading-relaxed text-accent-gold">{section.lead}</p> : null}
                   {section.description ? <p className="mt-5 text-lg leading-relaxed text-muted-60">{section.description}</p> : null}
                   {section.ctaLabel ? (
                     <div className="mt-8">
                       <span
                         onClick={() => navigate('/contato')}
-                        className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-primary-gold transition-opacity hover:opacity-80"
+                        className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-accent-gold transition-opacity hover:opacity-80"
                       >
                         {section.ctaLabel}
                         <ArrowRight size={14} />
@@ -1110,19 +1110,19 @@ export default function MarketPage({ slug }: MarketPageProps) {
                     {section.cards.map((card, idx) => (
                       <article
                         key={card.title}
-                        className="group relative rounded-[24px] bg-[#0A0E1A] border border-[rgba(255,255,255,0.06)] p-8 transition-all hover:border-[rgba(255,197,0,0.3)] hover:bg-[#0C1222]"
+                        className="group relative rounded-[24px] bg-[#0A0E1A] border border-[rgba(255,255,255,0.06)] p-8 transition-all hover:border-[rgba(201,168,76,0.3)] hover:bg-[#0C1222]"
                         style={{
                           boxShadow: '0 20px 40px rgba(0,0,0,0.5)'
                         }}
                       >
-                        <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-[#FFC500]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-[#C9A84C]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                         
                         <div className="flex flex-col sm:flex-row items-start gap-5">
-                          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[rgba(255,197,0,0.08)] flex items-center justify-center border border-[rgba(255,197,0,0.15)] group-hover:bg-[rgba(255,197,0,0.15)] transition-colors">
-                            <span className="text-[#FFC500] font-bold text-lg">{idx + 1}</span>
+                          <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[rgba(201,168,76,0.08)] flex items-center justify-center border border-[rgba(201,168,76,0.15)] group-hover:bg-[rgba(201,168,76,0.15)] transition-colors">
+                            <span className="text-[#C9A84C] font-bold text-lg">{idx + 1}</span>
                           </div>
                           <div>
-                            <p className="text-2xl font-bold leading-tight text-white group-hover:text-[#FFC500] transition-colors" style={{ letterSpacing: '-0.02em' }}>
+                            <p className="text-2xl font-bold leading-tight text-white group-hover:text-[#C9A84C] transition-colors" style={{ letterSpacing: '-0.02em' }}>
                               {card.title}
                             </p>
                             {card.description && <p className="mt-3 text-base leading-relaxed text-muted-60">{card.description}</p>}
@@ -1155,14 +1155,14 @@ export default function MarketPage({ slug }: MarketPageProps) {
                     {section.title}
                   </h2>
 
-                  {section.lead ? <p className="mt-5 text-xl font-semibold leading-8 text-primary-gold">{section.lead}</p> : null}
+                  {section.lead ? <p className="mt-5 text-xl font-semibold leading-8 text-accent-gold">{section.lead}</p> : null}
                   {section.description ? <p className="mt-5 text-base leading-8 text-muted-62">{section.description}</p> : null}
 
                   {section.ctaLabel ? (
                     <div className="mt-8 flex justify-center md:justify-start">
                       <span
                         onClick={() => navigate('/contato')}
-                        className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-primary-gold transition-opacity hover:opacity-80"
+                        className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-accent-gold transition-opacity hover:opacity-80"
                       >
                         {section.ctaLabel}
                         <ArrowRight size={14} />
@@ -1187,7 +1187,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                   </div>
                 ) : (
                   <div className="card-hover rounded-[32px] bg-elevated p-8 shadow-[0_34px_80px_-58px_rgba(0,0,0,0.95)]">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary-gold">{t('mkt.localContext')}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent-gold">{t('mkt.localContext')}</p>
                     <p className="mt-4 text-2xl font-semibold leading-9 text-white" style={{ letterSpacing: '-0.03em' }}>
                       {section.description}
                     </p>
@@ -1200,7 +1200,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
       })}
 
       {market.stats ? (
-        <section className="bg-xscales py-20 md:py-24">
+        <section className="bg-navy-deep py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-3xl">
@@ -1215,7 +1215,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
 
               <span
                 onClick={() => navigate('/contato')}
-                className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-primary-gold transition-opacity hover:opacity-80"
+                className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-accent-gold transition-opacity hover:opacity-80"
               >
                 {market.stats.ctaLabel || t('mkt.talkMarket')}
                 <ArrowRight size={16} />
@@ -1230,7 +1230,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                 >
                   <p
                     className={`text-[30px] font-black leading-[1.15] tracking-[-0.04em] ${
-                      index % 2 === 0 ? 'text-primary-gold' : 'text-teal-xscales'
+                      index % 2 === 0 ? 'text-accent-gold' : 'text-accent-sapphire'
                     }`}
                   >
                     {item.value}
@@ -1247,7 +1247,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
         <section id="meios-de-pagamento" className="border-y border-subtle bg-surface py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <span className="badge-teal">{t('mkt.localCoverage')}</span>
+              <span className="badge-sapphire">{t('mkt.localCoverage')}</span>
               <h2
                 className="mt-6 text-[34px] font-bold leading-[1.1] text-white md:text-[44px]"
                 style={{ letterSpacing: '-0.04em' }}
@@ -1261,7 +1261,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
 
             <div className="mt-12 grid gap-8 xl:grid-cols-[220px_minmax(0,1fr)]">
               <aside className="rounded-[28px] border border-subtle bg-elevated p-4 shadow-[0_28px_64px_-52px_rgba(0,0,0,0.9)] xl:sticky xl:top-28 xl:self-start">
-                <p className="px-3 pb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary-gold">
+                <p className="px-3 pb-3 text-xs font-semibold uppercase tracking-[0.22em] text-accent-gold">
                   {t('mkt.markets')}
                 </p>
                 <div className="space-y-1">
@@ -1281,9 +1281,9 @@ export default function MarketPage({ slug }: MarketPageProps) {
                         <span
                           className="flex cursor-pointer items-center justify-between rounded-2xl border px-3 py-3 text-sm font-medium transition-colors"
                           style={{
-                            background: isActive ? 'rgba(255,197,0,0.08)' : 'transparent',
-                            borderColor: isActive ? 'rgba(255,197,0,0.20)' : 'transparent',
-                            color: isActive ? '#FFC500' : 'rgba(248,250,252,0.72)',
+                            background: isActive ? 'rgba(201,168,76,0.08)' : 'transparent',
+                            borderColor: isActive ? 'rgba(201,168,76,0.20)' : 'transparent',
+                            color: isActive ? '#C9A84C' : 'rgba(248,250,252,0.72)',
                           }}
                         >
                           {itemName}
@@ -1295,7 +1295,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                 </div>
               </aside>
 
-              <div className="rounded-[32px] border border-subtle bg-xscales p-6 shadow-[0_32px_76px_-56px_rgba(0,0,0,0.95)] md:p-8">
+              <div className="rounded-[32px] border border-subtle bg-navy-deep p-6 shadow-[0_32px_76px_-56px_rgba(0,0,0,0.95)] md:p-8">
                 <div className="flex flex-col gap-5 border-b border-subtle pb-6 md:flex-row md:items-center md:justify-between">
                   <div className="flex items-center gap-4">
                     <MarketFlag name={market.name} flagCode={market.flagCode} flagAsset={market.flagAsset} size={56} />
@@ -1324,7 +1324,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                       }`}
                     >
                       <div className="flex items-start">
-                        <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary-gold">
+                        <p className="text-sm font-bold uppercase tracking-[0.18em] text-accent-gold">
                           {category.name}
                         </p>
                       </div>
@@ -1336,7 +1336,7 @@ export default function MarketPage({ slug }: MarketPageProps) {
                           return (
                             <div
                               key={`${category.name}-${logo.alt}-${logo.src}`}
-                              className="flex h-[78px] items-center justify-center overflow-hidden rounded-2xl border border-[#E6EAF3] bg-white px-3 py-2 shadow-[0_20px_40px_-34px_rgba(0,0,0,0.55)] transition-colors hover:border-[rgba(255,197,0,0.35)] md:h-[84px]"
+                              className="flex h-[78px] items-center justify-center overflow-hidden rounded-2xl border border-[#E6EAF3] bg-white px-3 py-2 shadow-[0_20px_40px_-34px_rgba(0,0,0,0.55)] transition-colors hover:border-[rgba(201,168,76,0.35)] md:h-[84px]"
                             >
                               <img
                                 src={logo.src}
@@ -1358,14 +1358,14 @@ export default function MarketPage({ slug }: MarketPageProps) {
         </section>
       ) : null}
 
-      <section className="bg-xscales py-20 md:py-28">
+      <section className="bg-navy-deep py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[40px] border border-primary-15 bg-[linear-gradient(135deg,rgba(16,24,43,0.96)_0%,rgba(11,16,32,1)_100%)] px-6 py-10 shadow-[0_36px_88px_-64px_rgba(0,0,0,0.98)] md:px-12 md:py-14 lg:px-16">
-            <div className="glow-circle -right-12 top-10 h-[220px] w-[220px]" aria-hidden="true" />
-            <div className="glow-circle-teal bottom-0 left-0 h-[180px] w-[180px]" aria-hidden="true" />
+            <div className="absolute -right-12 top-10 h-[220px] w-[220px] glow-gold" aria-hidden="true" />
+            <div className="absolute bottom-0 left-0 h-[180px] w-[180px] glow-sapphire" aria-hidden="true" />
 
             <div className="relative max-w-4xl">
-              <span className="badge-teal">{t('mkt.regionalExpansion')}</span>
+              <span className="badge-sapphire">{t('mkt.regionalExpansion')}</span>
 
               <h2
                 className="mt-6 text-[42px] font-extrabold leading-[1.05] text-white md:text-[64px] lg:text-[82px]"

@@ -14,7 +14,7 @@ export default function Desenvolvedores() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   usePageMeta({
-    title: `${t('dev.label')} | XSCALES`,
+    title: `${t('dev.label')} | Spayse`,
     description: t('dev.subtitle'),
   });
 
@@ -64,14 +64,14 @@ export default function Desenvolvedores() {
                 <div className="absolute top-4 left-4 z-10">
                   <span
                     className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wide"
-                    style={{ background: 'rgba(0,159,173,0.85)', backdropFilter: 'blur(6px)', color: '#fff', letterSpacing: '0.06em' }}
+                    style={{ background: 'rgba(30,79,160,0.85)', backdropFilter: 'blur(6px)', color: '#fff', letterSpacing: '0.06em' }}
                   >
                     {block.tag}
                   </span>
                 </div>
                 <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to bottom, rgba(5,8,22,0.08) 0%, rgba(5,8,22,0.50) 45%, rgba(5,8,22,0.94) 80%, rgba(5,8,22,0.98) 100%)' }} />
                 <div className="absolute bottom-0 left-0 right-0 z-20 p-5">
-                  <div className="mb-2 h-0.5 w-7 rounded-full" style={{ background: 'linear-gradient(90deg,#009FAD,#FFC500)' }} />
+                  <div className="mb-2 h-0.5 w-7 rounded-full" style={{ background: 'linear-gradient(90deg,#1E4FA0,#C9A84C)' }} />
                   <h3 className="text-base font-bold text-white mb-1.5" style={{ letterSpacing: '-0.02em' }}>{block.title}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: 'rgba(248,250,252,0.72)' }}>{block.description}</p>
                 </div>
@@ -86,12 +86,12 @@ export default function Desenvolvedores() {
             className="relative overflow-hidden rounded-2xl p-10 md:p-14 text-center"
             style={{
               background: 'linear-gradient(135deg, rgba(11,16,32,0.90) 0%, rgba(16,24,43,0.90) 100%)',
-              border: '1px solid rgba(255,197,0,0.15)',
+              border: '1px solid rgba(201,168,76,0.15)',
             }}
           >
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: 'radial-gradient(ellipse at center, rgba(255,197,0,0.05) 0%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%)' }}
               aria-hidden="true"
             />
             <div className="relative">
@@ -105,15 +105,15 @@ export default function Desenvolvedores() {
                 <Link href="/contato" data-testid="link-dev-cta-contact">
                   <button
                     className="px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
-                    style={{ background: '#FFC500', color: '#050816', boxShadow: '0 0 24px rgba(255,197,0,0.25)' }}
+                    style={{ background: '#C9A84C', color: '#050816', boxShadow: '0 0 24px rgba(201,168,76,0.25)' }}
                   >
                     {t('dev.ctaBtn1')}
                   </button>
                 </Link>
                 <button
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
-                  style={{ border: '1px solid rgba(255,197,0,0.30)', color: '#FFC500', background: 'transparent' }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,197,0,0.08)'; }}
+                  style={{ border: '1px solid rgba(201,168,76,0.30)', color: '#C9A84C', background: 'transparent' }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.08)'; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
                   data-testid="button-dev-docs"
                 >

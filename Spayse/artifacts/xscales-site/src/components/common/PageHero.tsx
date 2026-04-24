@@ -50,7 +50,7 @@ export default function PageHero({
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse, rgba(255,197,0,0.12) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(201,168,76,0.12) 0%, transparent 70%)',
           filter: 'blur(40px)',
         }}
         aria-hidden="true"
@@ -75,14 +75,14 @@ export default function PageHero({
                     <span
                       className="text-sm cursor-pointer transition-colors"
                       style={{ color: 'rgba(248,250,252,0.50)' }}
-                      onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#FFC500'; }}
+                      onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = '#C9A84C'; }}
                       onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = 'rgba(248,250,252,0.50)'; }}
                     >
                       {crumb.label}
                     </span>
                   </Link>
                 ) : (
-                  <span className="text-sm font-medium" style={{ color: '#FFC500' }}>
+                  <span className="text-sm font-medium" style={{ color: '#C9A84C' }}>
                     {crumb.label}
                   </span>
                 )}
@@ -102,9 +102,9 @@ export default function PageHero({
               <span
                 className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase"
                 style={{
-                  background: 'rgba(255,197,0,0.12)',
-                  border: '1px solid rgba(255,197,0,0.25)',
-                  color: '#FFC500',
+                  background: 'rgba(201,168,76,0.12)',
+                  border: '1px solid rgba(201,168,76,0.25)',
+                  color: '#C9A84C',
                 }}
               >
                 {label}
@@ -149,18 +149,18 @@ export default function PageHero({
                   <button
                     className="px-6 py-3 rounded-lg text-sm font-semibold transition-all duration-200"
                     style={{
-                      background: '#FFC500',
+                      background: '#C9A84C',
                       color: '#050816',
-                      boxShadow: '0 0 30px rgba(255,197,0,0.30)',
+                      boxShadow: '0 0 30px rgba(201,168,76,0.30)',
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLButtonElement).style.background = '#FFC500';
-                      (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 0 40px rgba(255,197,0,0.45)';
+                      (e.currentTarget as HTMLButtonElement).style.background = '#C9A84C';
+                      (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 0 40px rgba(201,168,76,0.45)';
                       (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)';
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLButtonElement).style.background = '#FFC500';
-                      (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 0 30px rgba(255,197,0,0.30)';
+                      (e.currentTarget as HTMLButtonElement).style.background = '#C9A84C';
+                      (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 0 30px rgba(201,168,76,0.30)';
                       (e.currentTarget as HTMLButtonElement).style.transform = '';
                     }}
                   >
@@ -173,12 +173,12 @@ export default function PageHero({
                   <button
                     className="px-6 py-3 rounded-lg text-sm font-medium transition-all duration-200"
                     style={{
-                      border: '1px solid rgba(255,197,0,0.35)',
-                      color: '#FFC500',
+                      border: '1px solid rgba(201,168,76,0.35)',
+                      color: '#C9A84C',
                       background: 'transparent',
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,197,0,0.10)';
+                      (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.10)';
                       (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)';
                     }}
                     onMouseLeave={(e) => {

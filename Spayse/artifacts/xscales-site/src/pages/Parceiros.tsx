@@ -14,7 +14,7 @@ export default function Parceiros() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   usePageMeta({
-    title: `${t('parc.label')} | XSCALES`,
+    title: `${t('parc.label')} | Spayse`,
     description: t('parc.subtitle'),
   });
 
@@ -76,15 +76,15 @@ export default function Parceiros() {
                   border: '1px solid rgba(255,255,255,0.08)',
                   transition: 'all 0.3s ease',
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,197,0,0.22)'; }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(201,168,76,0.22)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)'; }}
                 data-testid={`card-partner-type-${i}`}
               >
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.18)' }}
+                  style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.18)' }}
                 >
-                  <pt.icon size={22} style={{ color: '#FFC500' }} />
+                  <pt.icon size={22} style={{ color: '#C9A84C' }} />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
                   {pt.title}
@@ -97,7 +97,7 @@ export default function Parceiros() {
                     <div key={bi} className="flex items-center gap-2">
                       <div
                         className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                        style={{ background: '#FFC500' }}
+                        style={{ background: '#C9A84C' }}
                       />
                       <span className="text-xs" style={{ color: 'rgba(248,250,252,0.60)' }}>{b}</span>
                     </div>
@@ -126,9 +126,9 @@ export default function Parceiros() {
               <button
                 className="px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-200"
                 style={{
-                  background: '#FFC500',
+                  background: '#C9A84C',
                   color: '#050816',
-                  boxShadow: '0 0 28px rgba(255,197,0,0.28)',
+                  boxShadow: '0 0 28px rgba(201,168,76,0.28)',
                 }}
               >
                 {t('parc.ctaBtn')}

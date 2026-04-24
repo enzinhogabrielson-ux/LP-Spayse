@@ -25,7 +25,7 @@ const platforms = [
   { id: 'kirvano', name: 'Kirvano', taxa: 5.49 },
 ];
 
-const XSCALES_TAXA = 3.5;
+const Spayse_TAXA = 3.5;
 const FAT_MIN = 100_000;
 const FAT_MAX = 1_000_000;
 const VALOR_MIN = 50_000;
@@ -33,8 +33,8 @@ const VALOR_MAX = 10_000_000;
 const PROD_MIN = 50;
 const PROD_MAX = 50_000;
 
-const GOLD = '#FFC500';
-const TEAL = '#009FAD';
+const GOLD = '#C9A84C';
+const TEAL = '#1E4FA0';
 
 type Platform = (typeof platforms)[number];
 type ViewMode = 'costs' | 'revenue';
@@ -168,7 +168,7 @@ function NumberInput({
         className="w-full rounded-xl px-4 py-3 text-sm text-white transition-colors focus:outline-none"
         style={{ background: '#0C1220', border: '1.5px solid rgba(255,255,255,0.08)' }}
         onFocus={(event) => {
-          event.currentTarget.style.borderColor = 'rgba(255,197,0,0.40)';
+          event.currentTarget.style.borderColor = 'rgba(201,168,76,0.40)';
         }}
         onBlur={(event) => {
           event.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
@@ -207,7 +207,7 @@ export default function CalculatorSection() {
   const [chartType, setChartType] = useState<ChartMode>('bar');
 
   const custoOutros = faturamento * (customTaxa / 100);
-  const custoXscales = faturamento * (XSCALES_TAXA / 100);
+  const custoSpayse = faturamento * (Spayse_TAXA / 100);
   const baseLucro = valorMedio * numProdutores * (lucroPct / 100);
   const growthFactor = 1 + crescimento / 100;
   const meses = Array.from({ length: 12 }, (_, index) => baseLucro * Math.pow(growthFactor, 2 * index));
@@ -227,7 +227,7 @@ export default function CalculatorSection() {
         className="pointer-events-none absolute inset-0"
         aria-hidden="true"
         style={{
-          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255,197,0,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)',
         }}
       />
 
@@ -235,7 +235,7 @@ export default function CalculatorSection() {
         <div className="mb-12 text-center">
           <div
             className="mb-5 inline-flex items-center gap-2 rounded-full px-4 py-2"
-            style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.25)' }}
+            style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.25)' }}
           >
             <span className="h-1.5 w-1.5 animate-pulse rounded-full" style={{ background: GOLD }} />
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: GOLD }}>
@@ -384,7 +384,7 @@ export default function CalculatorSection() {
                 className="rounded-2xl p-5"
                 style={{
                   background: 'linear-gradient(145deg,#030D10 0%,#05181E 100%)',
-                  border: '1px solid rgba(0,159,173,0.25)',
+                  border: '1px solid rgba(30,79,160,0.25)',
                 }}
               >
                 <div className="mb-8 flex items-start justify-between">
@@ -411,7 +411,7 @@ export default function CalculatorSection() {
                     height="22"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="rgba(0,159,173,0.70)"
+                    stroke="rgba(30,79,160,0.70)"
                     strokeWidth="1.8"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -425,10 +425,10 @@ export default function CalculatorSection() {
                 </div>
 
                 <p className="mb-2 text-xs" style={{ color: 'rgba(248,250,252,0.50)' }}>
-                  {t('calc.savingsXscales')}
+                  {t('calc.savingsSpayse')}
                 </p>
                 <p className="mb-4 text-2xl font-bold text-white" style={{ letterSpacing: '-0.025em' }}>
-                  {formatCurrency(custoXscales)}
+                  {formatCurrency(custoSpayse)}
                 </p>
                 <div className="flex items-center gap-1.5">
                   <svg
@@ -445,7 +445,7 @@ export default function CalculatorSection() {
                     <polyline points="16 17 22 17 22 11" />
                   </svg>
                   <span className="text-sm font-semibold" style={{ color: TEAL }}>
-                    {XSCALES_TAXA.toFixed(1)}% {t('calc.rateLabel')}
+                    {Spayse_TAXA.toFixed(1)}% {t('calc.rateLabel')}
                   </span>
                 </div>
               </div>
@@ -557,11 +557,11 @@ export default function CalculatorSection() {
                         onClick={() => setChartType(option.id)}
                         className="rounded-md px-3 py-1 text-xs font-medium transition-all"
                         style={{
-                          background: chartType === option.id ? 'rgba(255,197,0,0.15)' : 'transparent',
+                          background: chartType === option.id ? 'rgba(201,168,76,0.15)' : 'transparent',
                           color: chartType === option.id ? GOLD : 'rgba(248,250,252,0.45)',
                           border:
                             chartType === option.id
-                              ? '1px solid rgba(255,197,0,0.35)'
+                              ? '1px solid rgba(201,168,76,0.35)'
                               : '1px solid transparent',
                         }}
                       >
@@ -587,7 +587,7 @@ export default function CalculatorSection() {
                         />
                         <YAxis hide />
                         <Tooltip
-                          cursor={{ fill: 'rgba(0,159,173,0.06)' }}
+                          cursor={{ fill: 'rgba(30,79,160,0.06)' }}
                           content={({ active, payload, label }) => {
                             if (!active || !payload?.length) return null;
 
@@ -602,7 +602,7 @@ export default function CalculatorSection() {
                                 className="rounded-xl px-3 py-2 text-xs"
                                 style={{
                                   background: '#0F1E30',
-                                  border: '1px solid rgba(0,159,173,0.30)',
+                                  border: '1px solid rgba(30,79,160,0.30)',
                                   color: '#fff',
                                 }}
                               >
@@ -616,9 +616,9 @@ export default function CalculatorSection() {
                                   <span
                                     className="inline-block rounded px-1.5 py-0.5 text-xs font-medium"
                                     style={{
-                                      background: 'rgba(0,159,173,0.15)',
+                                      background: 'rgba(30,79,160,0.15)',
                                       color: TEAL,
-                                      border: '1px solid rgba(0,159,173,0.30)',
+                                      border: '1px solid rgba(30,79,160,0.30)',
                                     }}
                                   >
                                     +{growth.toFixed(1)}%
@@ -627,9 +627,9 @@ export default function CalculatorSection() {
                                   <span
                                     className="inline-block rounded px-1.5 py-0.5 text-xs font-medium"
                                     style={{
-                                      background: 'rgba(255,197,0,0.12)',
+                                      background: 'rgba(201,168,76,0.12)',
                                       color: GOLD,
-                                      border: '1px solid rgba(255,197,0,0.25)',
+                                      border: '1px solid rgba(201,168,76,0.25)',
                                     }}
                                   >
                                     Base
@@ -641,7 +641,7 @@ export default function CalculatorSection() {
                         />
                         <Bar dataKey="lucro" radius={[4, 4, 0, 0]}>
                           {meses.map((_, index) => (
-                            <Cell key={index} fill={`rgba(0,159,173,${0.35 + (index / 11) * 0.65})`} />
+                            <Cell key={index} fill={`rgba(30,79,160,${0.35 + (index / 11) * 0.65})`} />
                           ))}
                         </Bar>
                       </BarChart>
@@ -664,7 +664,7 @@ export default function CalculatorSection() {
                         />
                         <YAxis hide />
                         <Tooltip
-                          cursor={{ stroke: 'rgba(0,159,173,0.25)', strokeWidth: 1 }}
+                          cursor={{ stroke: 'rgba(30,79,160,0.25)', strokeWidth: 1 }}
                           content={({ active, payload, label }) => {
                             if (!active || !payload?.length) return null;
 
@@ -679,7 +679,7 @@ export default function CalculatorSection() {
                                 className="rounded-xl px-3 py-2 text-xs"
                                 style={{
                                   background: '#0F1E30',
-                                  border: '1px solid rgba(0,159,173,0.30)',
+                                  border: '1px solid rgba(30,79,160,0.30)',
                                   color: '#fff',
                                 }}
                               >
@@ -693,9 +693,9 @@ export default function CalculatorSection() {
                                   <span
                                     className="inline-block rounded px-1.5 py-0.5 text-xs font-medium"
                                     style={{
-                                      background: 'rgba(0,159,173,0.15)',
+                                      background: 'rgba(30,79,160,0.15)',
                                       color: TEAL,
-                                      border: '1px solid rgba(0,159,173,0.30)',
+                                      border: '1px solid rgba(30,79,160,0.30)',
                                     }}
                                   >
                                     +{growth.toFixed(1)}%
@@ -704,9 +704,9 @@ export default function CalculatorSection() {
                                   <span
                                     className="inline-block rounded px-1.5 py-0.5 text-xs font-medium"
                                     style={{
-                                      background: 'rgba(255,197,0,0.12)',
+                                      background: 'rgba(201,168,76,0.12)',
                                       color: GOLD,
-                                      border: '1px solid rgba(255,197,0,0.25)',
+                                      border: '1px solid rgba(201,168,76,0.25)',
                                     }}
                                   >
                                     Base
@@ -735,7 +735,7 @@ export default function CalculatorSection() {
                 className="rounded-2xl p-5"
                 style={{
                   background: 'linear-gradient(145deg,#030D10 0%,#05181E 100%)',
-                  border: '1px solid rgba(0,159,173,0.25)',
+                  border: '1px solid rgba(30,79,160,0.25)',
                 }}
               >
                 <div className="mb-4 flex items-center gap-3">

@@ -18,7 +18,7 @@ export default function Solucoes() {
   const t = (key: string) => tr(key, lang);
   const ref = useRef(null);
   usePageMeta({
-    title: `${t('sol.label')} | XSCALES`,
+    title: `${t('sol.label')} | Spayse`,
     description: t('sol.subtitle'),
   });
   const isInView = useInView(ref, { once: true, margin: '-80px' });
@@ -57,7 +57,7 @@ export default function Solucoes() {
                     transition: 'all 0.3s ease',
                   }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,197,0,0.22)';
+                    (e.currentTarget as HTMLElement).style.borderColor = 'rgba(201,168,76,0.22)';
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.08)';
@@ -66,9 +66,9 @@ export default function Solucoes() {
                 >
                   <div
                     className="w-14 h-14 rounded-xl flex-shrink-0 flex items-center justify-center"
-                    style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.18)' }}
+                    style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.18)' }}
                   >
-                    <Icon size={24} style={{ color: '#FFC500' }} />
+                    <Icon size={24} style={{ color: '#C9A84C' }} />
                   </div>
 
                   <div className="flex-1">
@@ -84,9 +84,9 @@ export default function Solucoes() {
                           key={fi}
                           className="px-3 py-1 rounded-full text-xs font-medium"
                           style={{
-                            background: 'rgba(255,197,0,0.08)',
-                            border: '1px solid rgba(255,197,0,0.15)',
-                            color: 'rgba(255,197,0,0.85)',
+                            background: 'rgba(201,168,76,0.08)',
+                            border: '1px solid rgba(201,168,76,0.15)',
+                            color: 'rgba(201,168,76,0.85)',
                           }}
                         >
                           {f}
@@ -119,9 +119,9 @@ export default function Solucoes() {
             <button
               className="px-7 py-3.5 rounded-lg text-sm font-semibold transition-all duration-200"
               style={{
-                background: '#FFC500',
+                background: '#C9A84C',
                 color: '#050816',
-                boxShadow: '0 0 28px rgba(255,197,0,0.28)',
+                boxShadow: '0 0 28px rgba(201,168,76,0.28)',
               }}
             >
               {t('sol.ctaBtn')}

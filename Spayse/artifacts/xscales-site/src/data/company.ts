@@ -1,7 +1,7 @@
 export const company = {
-  name: 'XSCALES',
+  name: 'Spayse',
   tagline: 'Infraestrutura financeira para operações que precisam escalar.',
-  description: 'A XSCALES é uma empresa de infraestrutura financeira com foco em pagamentos, banking e operação internacional. Combinamos tecnologia, governança e adaptação operacional para apoiar negócios em diferentes contextos e mercados.',
+  description: 'A Spayse é uma empresa de infraestrutura financeira com foco em pagamentos, banking e operação internacional. Combinamos tecnologia, governança e adaptação operacional para apoiar negócios em diferentes contextos e mercados.',
   mission: 'Simplificar a complexidade das operações financeiras modernas e apoiar empresas que desejam crescer com mais inteligência.',
   vision: 'Ser a infraestrutura escolhida por empresas que buscam escala, eficiência e capacidade real de expansão.',
   values: [
@@ -11,21 +11,21 @@ export const company = {
     'Visão estratégica de longo prazo',
   ],
   contact: {
-    email: 'contato@xscales.com',
+    email: 'contato@spayse.com',
     address: 'São Paulo, Brasil',
   },
   social: {
-    linkedin: 'https://linkedin.com/company/xscales',
-    twitter: 'https://twitter.com/xscales',
-    instagram: 'https://instagram.com/xscales',
+    linkedin: 'https://linkedin.com/company/spayse',
+    twitter: 'https://twitter.com/spayse',
+    instagram: 'https://instagram.com/spayse',
   },
 };
 
 export const metrics = [
   { value: '12+', label: 'Países atendidos' },
-  { value: '500+', label: 'Clientes ativos' },
-  { value: '99.9%', label: 'Uptime garantido' },
-  { value: 'R$ 2bi+', label: 'Volume processado' },
+  { value: '1.500+', label: 'Clientes ativos' },
+  { value: '99,99%', label: 'Uptime garantido' },
+  { value: '+US$ 2B', label: 'Volume processado' },
 ];
 
 export const valuePropositions = [

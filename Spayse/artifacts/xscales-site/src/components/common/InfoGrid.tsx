@@ -50,12 +50,12 @@ export default function InfoGrid({ items, columns = 3 }: InfoGridProps) {
                 width: 44,
                 height: 44,
                 borderRadius: '10px',
-                background: 'rgba(255,197,0,0.10)',
+                background: 'rgba(201,168,76,0.10)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '16px',
-                color: '#FFC500',
+                color: '#C9A84C',
               }}
             >
               {item.icon}

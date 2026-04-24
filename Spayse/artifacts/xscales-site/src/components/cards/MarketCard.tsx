@@ -25,8 +25,9 @@ export default function MarketCard({ market, index = 0 }: MarketCardProps) {
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.45, delay: index * 0.07 }}
       data-testid={`card-market-${market.id}`}
+      className="h-full"
     >
-      <Link href={`/mercados/${market.slug}`}>
+      <Link href={`/mercados/${market.slug}`} className="block h-full">
         <div className="group flex flex-col p-5 rounded-xl cursor-pointer h-full bg-surface border border-subtle card-hover">
           <div className="flex items-center gap-3 mb-3">
             {market.flagCode ? (
@@ -48,7 +49,7 @@ export default function MarketCard({ market, index = 0 }: MarketCardProps) {
             </h3>
           </div>
           <p className="text-sm flex-1 text-muted-55">{market.subtitle}</p>
-          <div className="flex items-center gap-1.5 mt-4 text-primary-gold/60 group-hover:text-primary-gold transition-colors market-explore-link">
+          <div className="flex items-center gap-1.5 mt-4 text-accent-gold/60 group-hover:text-accent-gold transition-colors market-explore-link">
             <span className="text-xs font-medium">{tr('common.exploreMarket', lang)}</span>
             <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
           </div>

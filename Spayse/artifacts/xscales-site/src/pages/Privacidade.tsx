@@ -6,7 +6,7 @@ const sections = [
   {
     id: 'introducao',
     title: 'Introdução',
-    content: `A XSCALES valoriza a privacidade e a proteção dos dados pessoais de seus usuários, clientes e parceiros. Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos e protegemos as informações pessoais que nos são confiadas.
+    content: `A Spayse valoriza a privacidade e a proteção dos dados pessoais de seus usuários, clientes e parceiros. Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos e protegemos as informações pessoais que nos são confiadas.
 
 Ao utilizar nossos serviços, você concorda com os termos desta política. Recomendamos a leitura atenta deste documento e de suas atualizações periódicas.
 
@@ -15,7 +15,7 @@ Esta política está em conformidade com a Lei Geral de Proteção de Dados (LGP
   {
     id: 'coleta',
     title: 'Coleta de Dados',
-    content: `Coletamos dados pessoais de diferentes formas, dependendo da sua interação com a XSCALES:
+    content: `Coletamos dados pessoais de diferentes formas, dependendo da sua interação com a Spayse:
 
 • Dados fornecidos diretamente: nome, e-mail, telefone, empresa, cargo e outras informações fornecidas ao preencher formulários, solicitar contato ou utilizar nossos serviços.
 
@@ -90,7 +90,7 @@ Para exercer seus direitos, entre em contato por meio de nossos canais instituci
     title: 'Contato do DPO',
     content: `Para questões relacionadas à privacidade e proteção de dados, você pode entrar em contato com nosso Encarregado de Proteção de Dados (DPO):
 
-E-mail: privacidade@xscales.com
+E-mail: privacidade@spayse.com
 Endereço: São Paulo, SP, Brasil
 
 Nosso DPO está disponível para esclarecer dúvidas, receber solicitações e garantir o exercício dos seus direitos como titular de dados.`,
@@ -111,8 +111,8 @@ A continuidade do uso de nossos serviços após as alterações implica aceitaç
 export default function Privacidade() {
   const [activeSection, setActiveSection] = useState('introducao');
   usePageMeta({
-    title: 'Política de Privacidade | XSCALES',
-    description: 'Política de Privacidade da XSCALES. Como coletamos, usamos e protegemos seus dados em conformidade com a LGPD.',
+    title: 'Política de Privacidade | Spayse',
+    description: 'Política de Privacidade da Spayse. Como coletamos, usamos e protegemos seus dados em conformidade com a LGPD.',
   });
 
   return (
@@ -126,6 +126,12 @@ export default function Privacidade() {
 
       <section className="py-16 md:py-24" style={{ background: '#050816' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* REBRAND-LEGAL: revisar */}
+          <div className="mb-8 p-4 rounded-lg" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)' }}>
+            <p className="text-sm" style={{ color: 'var(--slate-light)' }}>
+              Atualizado em [DATA]. Em [MÊS/ANO], nossa marca foi atualizada de XSCALES para Spayse. A entidade jurídica responsável permanece a mesma. Em caso de dúvida, consulte nosso Compliance.
+            </p>
+          </div>
           <div className="grid lg:grid-cols-4 gap-10">
             <aside className="lg:col-span-1">
               <nav className="sticky top-24 space-y-1" aria-label="Seções da política">
@@ -138,9 +144,9 @@ export default function Privacidade() {
                     }}
                     className="w-full text-left px-3 py-2.5 rounded-lg text-sm transition-all duration-200"
                     style={{
-                      color: activeSection === s.id ? '#FFC500' : 'rgba(248,250,252,0.60)',
-                      background: activeSection === s.id ? 'rgba(255,197,0,0.08)' : 'transparent',
-                      borderLeft: activeSection === s.id ? '2px solid #FFC500' : '2px solid transparent',
+                      color: activeSection === s.id ? '#C9A84C' : 'rgba(248,250,252,0.60)',
+                      background: activeSection === s.id ? 'rgba(201,168,76,0.08)' : 'transparent',
+                      borderLeft: activeSection === s.id ? '2px solid #C9A84C' : '2px solid transparent',
                     }}
                     data-testid={`nav-privacy-${s.id}`}
                   >

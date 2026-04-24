@@ -49,7 +49,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
         <div className="absolute top-3 left-3">
           <span
             className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold"
-            style={{ background: 'rgba(255,197,0,0.85)', backdropFilter: 'blur(6px)', color: '#050816' }}
+            style={{ background: 'rgba(201,168,76,0.85)', backdropFilter: 'blur(6px)', color: '#050816' }}
           >
             {post.category}
           </span>
@@ -74,7 +74,7 @@ export default function BlogCard({ post, index = 0 }: BlogCardProps) {
           </span>
           <span
             className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors"
-            style={{ color: 'rgba(255,197,0,0.60)' }}
+            style={{ color: 'rgba(201,168,76,0.60)' }}
           >
             {tr('common.readArticle', lang)}
             <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />

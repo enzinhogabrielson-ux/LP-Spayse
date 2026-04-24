@@ -48,7 +48,7 @@ export default function SolutionCard({ solution, index = 0 }: SolutionCardProps)
           style={{ background: 'linear-gradient(to bottom, rgba(5,8,22,0.10) 0%, rgba(5,8,22,0.70) 100%)' }}
         />
         <div className="absolute bottom-3 left-4">
-          <div className="h-0.5 w-8 rounded-full mb-1.5" style={{ background: 'linear-gradient(90deg,#FFC500,#009FAD)' }} />
+          <div className="h-0.5 w-8 rounded-full mb-1.5" style={{ background: 'linear-gradient(90deg,#C9A84C,#1E4FA0)' }} />
         </div>
       </div>
 
@@ -62,7 +62,7 @@ export default function SolutionCard({ solution, index = 0 }: SolutionCardProps)
         <Link href="/solucoes">
           <span
             className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium transition-colors"
-            style={{ color: 'rgba(255,197,0,0.60)' }}
+            style={{ color: 'rgba(201,168,76,0.60)' }}
             data-testid={`link-solution-saiba-mais-${solution.id}`}
           >
             {tr('common.learnMore', lang)}

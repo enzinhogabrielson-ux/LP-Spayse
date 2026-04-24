@@ -33,7 +33,7 @@ const sections = [
   {
     icon: Zap,
     title: 'Integridade Operacional',
-    description: 'A integridade operacional está no centro de cada processo da XSCALES. Garantimos que todas as operações sejam realizadas dentro dos parâmetros legais e éticos, com rastreabilidade completa.',
+    description: 'A integridade operacional está no centro de cada processo da Spayse. Garantimos que todas as operações sejam realizadas dentro dos parâmetros legais e éticos, com rastreabilidade completa.',
     items: [
       'Políticas anti-corrupção e suborno',
       'Gestão de conflitos de interesse',
@@ -70,8 +70,8 @@ export default function Compliance() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   usePageMeta({
-    title: 'Compliance | XSCALES',
-    description: 'Estrutura regulatória robusta. PCI-DSS, LGPD, licenciamento e auditorias. Compliance como pilar central da operação XSCALES.',
+    title: 'Compliance | Spayse',
+    description: 'Estrutura regulatória robusta. PCI-DSS, LGPD, licenciamento e auditorias. Compliance como pilar central da operação Spayse.',
   });
 
   return (
@@ -79,7 +79,7 @@ export default function Compliance() {
       <PageHero
         label="Compliance"
         title="Conformidade como parte da nossa estrutura"
-        subtitle="Na XSCALES, compliance não é uma função periférica — está integrado à forma como projetamos nossos produtos, processos e relacionamentos."
+        subtitle="Na Spayse, compliance não é uma função periférica — está integrado à forma como projetamos nossos produtos, processos e relacionamentos."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Compliance' }]}
       />
 
@@ -102,9 +102,9 @@ export default function Compliance() {
                 <div className="flex items-center gap-3 mb-4">
                   <div
                     className="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center"
-                    style={{ background: 'rgba(255,197,0,0.10)', border: '1px solid rgba(255,197,0,0.18)' }}
+                    style={{ background: 'rgba(201,168,76,0.10)', border: '1px solid rgba(201,168,76,0.18)' }}
                   >
-                    <s.icon size={18} style={{ color: '#FFC500' }} />
+                    <s.icon size={18} style={{ color: '#C9A84C' }} />
                   </div>
                   <h3 className="text-lg font-bold text-white" style={{ letterSpacing: '-0.02em' }}>
                     {s.title}
@@ -116,7 +116,7 @@ export default function Compliance() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {s.items.map((item, ii) => (
                     <div key={ii} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#FFC500' }} />
+                      <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C9A84C' }} />
                       <span className="text-sm" style={{ color: 'rgba(248,250,252,0.65)' }}>{item}</span>
                     </div>
                   ))}
@@ -132,7 +132,7 @@ export default function Compliance() {
             className="mt-16 p-8 rounded-2xl text-center"
             style={{
               background: 'rgba(11,16,32,0.60)',
-              border: '1px solid rgba(255,197,0,0.12)',
+              border: '1px solid rgba(201,168,76,0.12)',
             }}
           >
             <h3 className="text-xl font-bold text-white mb-3">{tr('inst.complianceQ', lang)}</h3>
@@ -143,9 +143,9 @@ export default function Compliance() {
               <Link href="/ouvidoria" data-testid="link-compliance-ouvidoria">
                 <button
                   className="px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200"
-                  style={{ background: '#FFC500', color: '#050816' }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FFC500'; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FFC500'; }}
+                  style={{ background: '#C9A84C', color: '#050816' }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#C9A84C'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#C9A84C'; }}
                 >
                   {tr('inst.ouvidoria', lang)}
                 </button>
@@ -153,8 +153,8 @@ export default function Compliance() {
               <Link href="/contato" data-testid="link-compliance-contact">
                 <button
                   className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200"
-                  style={{ border: '1px solid rgba(255,197,0,0.30)', color: '#FFC500', background: 'transparent' }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,197,0,0.08)'; }}
+                  style={{ border: '1px solid rgba(201,168,76,0.30)', color: '#C9A84C', background: 'transparent' }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(201,168,76,0.08)'; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'transparent'; }}
                 >
                   {tr('inst.talkUs', lang)}

@@ -62,7 +62,7 @@ export default function SectionHeader({
         className={`mt-5 h-0.5 w-12 rounded-full ${centered ? 'mx-auto' : ''}`}
         style={{
           transformOrigin: centered ? 'center' : 'left',
-          background: 'linear-gradient(90deg, #009FAD, #FFC500)',
+          background: 'linear-gradient(90deg, #1E4FA0, #C9A84C)',
         }}
       />
     </div>
