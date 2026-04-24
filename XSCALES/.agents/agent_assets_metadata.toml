@@ -1,0 +1,134 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "TNyVNJnBT6Mzg3Q1UA2n8"
+uri = "file://attached_assets/stock_images/integration-centralized.jpg"
+type = "image"
+title = "global financial network digital connections technology fintech payment infrastructure"
+
+[[outputs]]
+id = "QDao_vjVzrOlMjnkmKl7Z"
+uri = "file://attached_assets/stock_images/cobertura-local-internacional.jpg"
+type = "image"
+title = "latin america cities aerial view map global business expansion international"
+
+[[outputs]]
+id = "9nS4rvouD175gJtprdQCI"
+uri = "file://attached_assets/stock_images/compliance-seguranca.jpg"
+type = "image"
+title = "cybersecurity data protection secure technology digital compliance"
+
+[[outputs]]
+id = "wJgblBGC_amYpEQN7hWdv"
+uri = "file://attached_assets/stock_images/escalabilidade-crescimento.jpg"
+type = "image"
+title = "business growth scaling technology innovation fintech startup success"
+
+[[outputs]]
+id = "07spdbmTB-wHOe8ewyKGn"
+uri = "file://attached_assets/stock_images/theme-governance.jpg"
+type = "image"
+title = "legal compliance governance regulatory policy document business"
+
+[[outputs]]
+id = "FPJte95_KJj_CfSXMzXZJ"
+uri = "file://attached_assets/stock_images/theme-api.jpg"
+type = "image"
+title = "developer coding API laptop terminal code software engineering"
+
+[[outputs]]
+id = "-MJMk0HITYbxNGZ3XB_VB"
+uri = "file://attached_assets/stock_images/theme-monitoring.jpg"
+type = "image"
+title = "real-time monitoring dashboard analytics data financial technology"
+
+[[outputs]]
+id = "B5e1BpzlMHT4uDT-I63Xk"
+uri = "file://attached_assets/stock_images/theme-support.jpg"
+type = "image"
+title = "technical support team headset communication business customer service"
+
+[[outputs]]
+id = "ml3IF4_s9cg74eMBqe9og"
+uri = "file://attached_assets/stock_images/theme-sandbox.jpg"
+type = "image"
+title = "software testing sandbox development environment quality assurance"
+
+[[outputs]]
+id = "yfFFRkdIiZD9cSpo-ukor"
+uri = "file://attached_assets/stock_images/sol-payments.jpg"
+type = "image"
+title = "fintech payment processing credit card digital transaction technology"
+
+[[outputs]]
+id = "V84DAKR6BVZfGmpULmsrO"
+uri = "file://attached_assets/stock_images/sol-banking.jpg"
+type = "image"
+title = "digital banking as a service financial institution modern technology"
+
+[[outputs]]
+id = "G_JP-EnrwSHO8UJGg45K3"
+uri = "file://attached_assets/stock_images/sol-orchestration.jpg"
+type = "image"
+title = "workflow orchestration data flows financial dashboard control"
+
+[[outputs]]
+id = "Y34bx0vZXW1RMMS1_Ul-Y"
+uri = "file://attached_assets/stock_images/sol-reconciliation.jpg"
+type = "image"
+title = "financial data reconciliation analytics reports accounting precision"
+
+[[outputs]]
+id = "gp40QI5qOXwn0VpG8SE4i"
+uri = "file://attached_assets/stock_images/sobre-how.jpg"
+type = "image"
+title = "business strategy consulting planning data driven decisions"
+
+[[outputs]]
+id = "aKZGAfs05au5xucAq1gNx"
+uri = "file://attached_assets/stock_images/sobre-values.jpg"
+type = "image"
+title = "trust partnership values handshake business collaboration"
+
+[[outputs]]
+id = "H-Lxqfcw_Ra7-lUT0mAQc"
+uri = "file://attached_assets/stock_images/sobre-vision.jpg"
+type = "image"
+title = "vision future innovation technology growth horizon business"
+
+[[outputs]]
+id = "NvCYeyKwJ5bfjndi63096"
+uri = "file://attached_assets/stock_images/blog-pagamentos.jpg"
+type = "image"
+title = "digital payment fintech technology transaction processing innovation"
+
+[[outputs]]
+id = "6nZmpv8UyIaH0ibuUk6Q8"
+uri = "file://attached_assets/stock_images/blog-expansao.jpg"
+type = "image"
+title = "international business expansion global trade Latin America world market"
+
+[[outputs]]
+id = "M0RgFxgfKVLSG-HFZoy_l"
+uri = "file://attached_assets/stock_images/blog-mercados.jpg"
+type = "image"
+title = "emerging markets business growth Latin America economy finance"
+
+[[outputs]]
+id = "H3iEtWMY7RS8Sd8xk0PP1"
+uri = "file://attached_assets/stock_images/blog-compliance.jpg"
+type = "image"
+title = "regulatory compliance legal governance audit document policy"
+
+[[outputs]]
+id = "oIGNuQIWws7hoOJtRp49V"
+uri = "file://attached_assets/stock_images/blog-banking.jpg"
+type = "image"
+title = "banking digital finance modern institution money technology"
+
+[[outputs]]
+id = "d7bDnPNtnSb9QVnY9-HOh"
+uri = "file://attached_assets/stock_images/blog-tecnologia.jpg"
+type = "image"
+title = "technology software innovation code artificial intelligence data"

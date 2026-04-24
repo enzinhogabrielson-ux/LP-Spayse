@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e3051c;
+      }
+
+      .cls-3 {
+        fill: #025899;
+      }
+
+      .cls-4 {
+        fill: #996c3b;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        fill: #026d47;
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-1" cx="470" cy="150" r="125.7"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="245.77" y="19.19" width="448.47" height="261.62"/>
+    </clipPath>
+  </defs>
+  <g class="cls-8">
+    <g id="Panama">
+      <g class="cls-5">
+        <rect class="cls-6" x="245.77" y="19.19" width="448.47" height="261.62"/>
+        <rect class="cls-3" x="245.77" y="149.99" width="224.23" height="130.82"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <path class="cls-7" d="M24.3,150c0,46.53,25.28,87.15,62.85,108.88V41.12c-37.57,21.73-62.85,62.35-62.85,108.88Z"/>
+    <path class="cls-2" d="M275.7,150c0-46.53-25.28-87.15-62.85-108.88v217.76c37.57-21.73,62.85-62.35,62.85-108.88Z"/>
+    <path class="cls-6" d="M201.68,35.38c-15.76-7.12-33.26-11.08-51.68-11.08-22.9,0-44.36,6.12-62.85,16.82v217.76c18.49,10.7,39.95,16.82,62.85,16.82,18.42,0,35.91-3.96,51.68-11.08,3.83-1.73,7.56-3.65,11.17-5.74V41.12c-3.62-2.09-7.34-4.01-11.17-5.74Z"/>
+    <circle class="cls-1" cx="150" cy="150" r="125.7"/>
+    <circle class="cls-4" cx="150" cy="150.77" r="25.29"/>
+    <circle class="cls-1" cx="150" cy="150" r="125.7"/>
+  </g>
+</svg>

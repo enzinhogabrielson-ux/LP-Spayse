@@ -1,0 +1,854 @@
+Crie um site institucional premium e multipágina para a XSCALES, desenvolvido obrigatoriamente em React.
+
+IMPORTANTE:
+- Responda e documente tudo em português do Brasil.
+- Toda a interface do site deve estar em português do Brasil.
+- Não faça perguntas básicas. Execute com autonomia alta.
+- Priorize precisão, organização, consistência visual e excelência de execução.
+- O resultado final NÃO é one page. É um site institucional completo com múltiplas rotas.
+- Siga a estrutura editorial e a copy institucional fornecidas para a XSCALES.
+- Em caso de conflito entre referências, priorize:
+  1. identidade visual extraída do HTML da XSCALES
+  2. copy e arquitetura do PDF da XSCALES
+  3. ritmo visual e sofisticação das referências visuais enviadas
+
+==================================================
+1. PAPEL E MISSÃO
+==================================================
+
+Você é um diretor de criação + lead frontend engineer + product designer + arquiteto de informação.
+Sua missão é criar um site institucional premium para a XSCALES, com aparência de empresa de infraestrutura financeira global.
+
+O site deve transmitir:
+- solidez
+- tecnologia
+- segurança
+- compliance
+- escalabilidade
+- inteligência operacional
+- presença regional
+- capacidade de expansão internacional
+
+A XSCALES não deve parecer apenas uma processadora de pagamentos.
+Ela deve ser percebida como uma infraestrutura estratégica para empresas que precisam unir tecnologia, operação, liquidação, visão regional e crescimento internacional em uma mesma base.
+
+Mensagem central que deve atravessar todo o site:
+“A XSCALES transforma estruturas fragmentadas em uma operação financeira integrada, preparada para crescer com inteligência, controle e escala.”
+
+==================================================
+2. INFORMAÇÕES DO PROJETO
+==================================================
+
+Nome do projeto:
+XSCALES Site Institucional
+
+Descrição:
+Site institucional premium para apresentar a XSCALES como empresa de infraestrutura financeira com foco em pagamentos, banking, operação internacional, liquidação, expansão na América Latina e mercados emergentes.
+
+Plataforma:
+Web
+
+Ambiente:
+Online
+
+Hospedagem:
+Preparar para deploy simples no Replit.
+
+Idioma de interação com o Replit Agent:
+Português do Brasil
+
+Idioma da interface do produto:
+Português do Brasil
+
+Estilo de interface:
+Dark premium, institucional, tecnológica, elegante, moderna, limpa e comercialmente forte.
+
+Aplicações de referência:
+- visual dark premium com seções marcantes e sensação de plataforma sofisticada
+- hierarquia editorial muito boa
+- grids elegantes
+- cards premium
+- narrativa corporativa clara
+- ritmo visual refinado
+
+Saídas esperadas:
+- site React completo
+- rotas reais
+- layout responsivo
+- componentes reutilizáveis
+- conteúdo institucional implementado
+- navegação consistente
+- páginas prontas para apresentação comercial
+
+Recursos adicionais desejados:
+- header sticky
+- transições suaves entre páginas
+- microinterações premium
+- SEO básico bem configurado
+- formulário de contato com validação
+- estrutura escalável para futuras expansões
+- dados organizados em objetos/arrays para fácil manutenção
+
+==================================================
+3. STACK OBRIGATÓRIA
+==================================================
+
+Use obrigatoriamente:
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+- React Router
+- Framer Motion
+- Lucide React
+
+Arquitetura:
+- componentização real
+- código limpo
+- separação entre layout, conteúdo e dados
+- sem HTML solto como solução final
+- sem código improvisado
+- sem visual genérico de template
+
+==================================================
+4. DIREÇÃO VISUAL E DESIGN SYSTEM
+==================================================
+
+A identidade visual deve seguir prioritariamente o design system do HTML da XSCALES.
+
+COR PRIMÁRIA OBRIGATÓRIA:
+- #C6B912
+
+Derivados recomendados:
+- rgba(198,185,18,0.85)
+- rgba(198,185,18,0.45)
+- rgba(198,185,18,0.18)
+- rgba(198,185,18,0.10)
+
+Paleta base sugerida:
+- bg-main: #050816
+- bg-surface: #0B1020
+- bg-elevated: #10182B
+- border-subtle: rgba(255,255,255,0.08)
+- text-main: #F8FAFC
+- text-secondary: rgba(248,250,252,0.72)
+- text-muted: rgba(248,250,252,0.50)
+
+Direção estética:
+- fundo escuro premium
+- grid tecnológico sutil
+- linhas de conexão e fluxos discretos
+- glow leve com a cor da marca
+- aparência institucional e sofisticada
+- sem neon exagerado
+- sem cara de startup infantil
+- sem excesso de efeitos futuristas
+- elegância corporativa acima de tudo
+
+Tipografia:
+- escolha uma fonte sans sofisticada, moderna e altamente legível
+- títulos fortes
+- subtítulos claros
+- corpo editorial limpo
+- boa hierarquia de peso e espaçamento
+
+Componentes visuais:
+- cards escuros com leve transparência
+- bordas discretas
+- brilho sutil em hover
+- CTAs bem destacados com a cor #C6B912
+- ícones minimalistas
+- divisores finos e premium
+- uso forte de espaço em branco
+
+Animações:
+- suaves
+- profissionais
+- fade + translate leve
+- sem exagero
+- foco em percepção premium
+
+IMPORTANTE:
+Se os arquivos HTML de referência estiverem disponíveis no workspace, inspecione-os para extrair:
+- linguagem de borda
+- raio
+- sombra
+- opacidade
+- glow
+- espaçamento
+- comportamento visual de cards, painéis e botões
+
+==================================================
+5. ARQUITETURA DO SITE
+==================================================
+
+Crie um site institucional multipágina com estas rotas:
+
+- /
+- /solucoes
+- /mercados
+- /mercados/brasil
+- /mercados/mexico
+- /mercados/colombia
+- /mercados/peru
+- /mercados/chile
+- /mercados/argentina
+- /mercados/outros-mercados
+- /desenvolvedores
+- /parceiros
+- /sobre
+- /midia
+- /seguranca
+- /compliance
+- /contato
+- /privacidade
+- /termos
+- /ouvidoria
+- /404
+
+Observação:
+As páginas de privacidade, termos e ouvidoria podem começar com conteúdo institucional bem estruturado e placeholders elegantes, mantendo o mesmo nível visual do restante do site.
+
+==================================================
+6. ESTRUTURA TÉCNICA RECOMENDADA
+==================================================
+
+Organize assim:
+
+src/
+  assets/
+  components/
+    common/
+    layout/
+    sections/
+    cards/
+    ui/
+  data/
+  pages/
+  routes/
+  styles/
+  utils/
+  App.tsx
+  main.tsx
+
+Crie componentes reutilizáveis como:
+- Header
+- Footer
+- PageHero
+- SectionHeader
+- CTAButton
+- MetricCard
+- SolutionCard
+- MarketCard
+- InfoGrid
+- FeatureList
+- LogoStrip
+- ContactForm
+- BlogCard
+- ComplianceBlock
+- SecurityBlock
+- DeveloperBlock
+
+Crie arquivos de dados como:
+- navigation.ts
+- solutions.ts
+- markets.ts
+- blog.ts
+- footer.ts
+- company.ts
+- contact.ts
+
+==================================================
+7. REGRAS GERAIS DE UX E NAVEGAÇÃO
+==================================================
+
+- Header sticky com navegação principal clara
+- CTA visível no topo
+- Footer robusto e institucional
+- Breadcrumbs nas páginas internas, quando fizer sentido
+- Estados de hover refinados
+- Responsivo impecável em desktop, tablet e mobile
+- Menus mobile elegantes e funcionais
+- Boa legibilidade em todos os breakpoints
+- Transição visual consistente entre páginas
+- Títulos fortes e escaneáveis
+- CTAs estratégicos bem distribuídos
+
+==================================================
+8. TOM DE VOZ
+==================================================
+
+A comunicação deve ser:
+- institucional
+- premium
+- tecnológica
+- clara
+- comercialmente forte
+- segura
+- estratégica
+
+Evitar:
+- promessas exageradas
+- linguagem apelativa
+- tom informal demais
+- excesso de tecnicismo sem contexto
+
+Priorizar:
+- clareza
+- autoridade
+- estrutura
+- escala
+- confiança
+- expansão
+- eficiência operacional
+
+==================================================
+9. PÁGINA HOME
+==================================================
+
+Hero principal
+Headline:
+Infraestrutura financeira para empresas que querem escalar sem fronteiras
+
+Subheadline:
+A XSCALES conecta pagamentos, banking e operação internacional em uma única estrutura tecnológica, preparada para mercados locais e expansão global.
+
+Botões:
+- Falar com um especialista
+- Conhecer soluções
+
+Apoio visual do hero:
+- fundo escuro premium
+- grid tecnológico
+- fluxos de conexão
+- mapa abstrato com pontos interligados
+- elementos visuais sutis ligados a transações, liquidação e crescimento
+
+Seção 2 — Proposta de valor
+Título:
+Uma estrutura única para simplificar operações complexas
+
+Texto:
+A XSCALES foi criada para atender empresas que precisam vender, receber, processar, liquidar e expandir com mais inteligência. Nossa infraestrutura combina tecnologia, adaptação local e visão estratégica para transformar operações fragmentadas em uma jornada financeira integrada.
+
+Blocos:
+- Uma integração centralizada
+- Cobertura local e internacional
+- Compliance e segurança operacional
+- Escalabilidade para crescimento regional
+
+Seção 3 — Soluções em destaque
+Título:
+Soluções desenhadas para operações modernas
+
+Cards:
+1. Payments
+Receba com mais eficiência por meio de uma infraestrutura preparada para múltiplos métodos de pagamento e mercados locais.
+
+2. Payouts
+Automatize pagamentos, repasses e liquidações com mais controle, velocidade e rastreabilidade.
+
+3. Banking
+Tenha acesso a uma estrutura financeira que apoia a movimentação, gestão e expansão da sua operação.
+
+4. Cross Border
+Expanda para novos mercados com uma operação mais fluida, integrada e preparada para contextos regulatórios diversos.
+
+5. Orquestração Operacional
+Centralize integrações, fluxos, conciliações e rotinas críticas em um ambiente orientado por performance.
+
+CTA:
+Explorar soluções
+
+Seção 4 — Mercados
+Título:
+Presença estratégica onde o crescimento acontece
+
+Texto:
+A XSCALES foi estruturada para operar com profundidade em mercados que exigem adaptação real. Atuamos com foco em contextos locais, comportamento de pagamento, exigências regulatórias e oportunidades regionais.
+
+Cards:
+- Brasil
+- México
+- Colômbia
+- Peru
+- Chile
+- Argentina
+- América Latina
+- Mercados emergentes
+
+CTA:
+Ver mercados
+
+Seção 5 — Segurança e confiança
+Título:
+Segurança, conformidade e confiança em cada operação
+
+Texto:
+Nossa infraestrutura é pensada para empresas que exigem estabilidade, rastreabilidade e responsabilidade. A XSCALES adota padrões rigorosos de proteção, monitoramento e governança para apoiar operações de alto nível.
+
+Itens:
+- Padrões avançados de segurança
+- Monitoramento operacional
+- Governança e compliance
+- Estrutura preparada para crescimento sustentável
+
+CTA:
+Conhecer nossa base de segurança
+
+Seção 6 — Desenvolvedores
+Título:
+Integração mais clara para equipes mais rápidas
+
+Texto:
+A XSCALES oferece uma base técnica preparada para apoiar times de produto, tecnologia e operações na construção de fluxos mais eficientes.
+
+Blocos:
+- APIs e documentação
+- Integração simplificada
+- Ambientes de teste
+- Suporte técnico especializado
+
+CTA:
+Acessar área de desenvolvedores
+
+Seção 7 — Parceiros
+Título:
+Construímos ecossistemas, não apenas conexões
+
+Texto:
+A XSCALES acredita em relações estratégicas que ampliam alcance, capacidade e performance. Nossa estrutura está pronta para integrações, alianças comerciais e crescimento conjunto.
+
+CTA:
+Seja um parceiro
+
+Seção 8 — Conteúdo e mídia
+Título:
+Conteúdo, tendências e movimentos do mercado
+
+Texto:
+Acompanhe análises, atualizações e conteúdos institucionais sobre infraestrutura financeira, pagamentos, expansão internacional e transformação operacional.
+
+CTA:
+Acessar mídia e blog
+
+Seção final — Conversão
+Título:
+Leve sua operação para uma estrutura preparada para crescer
+
+Texto:
+Fale com a XSCALES e descubra como simplificar fluxos, consolidar operações e avançar com mais inteligência.
+
+Botões:
+- Falar com um especialista
+- Solicitar contato
+
+==================================================
+10. PÁGINA SOLUÇÕES
+==================================================
+
+Hero
+Headline:
+Uma infraestrutura modular para pagamentos, banking e expansão
+
+Subheadline:
+Soluções desenhadas para empresas que precisam de mais eficiência operacional, mais controle e mais capacidade de crescimento.
+
+Estrutura:
+- Payments
+Recebimentos preparados para múltiplos cenários operacionais, com mais fluidez, adaptação local e visão centralizada.
+
+- Payouts
+Pagamentos e repasses organizados em uma infraestrutura orientada por rastreabilidade e performance.
+
+- Banking
+Estrutura financeira para apoiar movimentação, liquidação e organização da operação.
+
+- Cross Border
+Uma base preparada para negócios que precisam atuar além das fronteiras com mais previsibilidade.
+
+- Reconciliação e controle
+Mais clareza sobre entradas, saídas, repasses e fluxo operacional.
+
+- Automação operacional
+Reduza fricções e ganhe escala com processos desenhados para crescimento.
+
+CTA final:
+Converse com a XSCALES
+
+==================================================
+11. PÁGINA MERCADOS
+==================================================
+
+Hero
+Headline:
+Expansão começa com inteligência local
+
+Subheadline:
+Cada mercado tem sua dinâmica. A XSCALES combina estrutura tecnológica, adaptação operacional e visão regional para apoiar empresas em diferentes geografias.
+
+Bloco geral:
+A capacidade de operar bem em novos mercados depende de muito mais do que tecnologia. Exige leitura de contexto, estrutura confiável e adaptação real.
+
+Cards de mercados:
+- Brasil
+- México
+- Colômbia
+- Peru
+- Chile
+- Argentina
+- Outros mercados estratégicos
+
+Cada card deve levar para uma rota real.
+
+==================================================
+12. PÁGINAS DE MERCADO
+==================================================
+
+Crie uma estrutura reutilizável para páginas de mercado.
+
+Modelo base de conteúdo:
+Hero:
+- nome do mercado
+- subtítulo específico do país
+
+Estrutura de seções:
+1. Panorama do mercado
+2. Oportunidades
+3. Como a XSCALES apoia
+4. CTA final
+
+Para Brasil, use como base:
+Headline:
+Brasil
+
+Subheadline:
+Uma operação financeira moderna exige adaptação ao comportamento local, velocidade e estrutura compatível com um mercado em constante transformação.
+
+Seção 1 — Panorama
+O Brasil representa uma das geografias mais dinâmicas para operações financeiras e digitais na América Latina. Com evolução contínua dos meios de pagamento e amadurecimento do ambiente regulatório, o mercado exige soluções preparadas para escala, experiência e segurança.
+
+Seção 2 — Oportunidades
+- Crescimento da digitalização
+- Evolução dos meios instantâneos
+- Forte adoção de pagamentos alternativos
+- Maior exigência por fluidez e confiança
+
+Seção 3 — Como a XSCALES apoia
+A XSCALES entrega uma base preparada para apoiar operações que exigem adaptação local, eficiência operacional e capacidade de crescimento sustentado.
+
+CTA:
+Fale com nosso time
+
+Para México, Colômbia, Peru, Chile, Argentina e Outros mercados estratégicos:
+- gere conteúdo institucional consistente com o tom da marca
+- mantenha a mesma estrutura
+- não invente dados estatísticos específicos
+- escreva de forma qualitativa, estratégica e elegante
+
+==================================================
+13. PÁGINA DESENVOLVEDORES
+==================================================
+
+Hero
+Headline:
+Uma base técnica pensada para acelerar integrações
+
+Subheadline:
+Mais clareza para times de tecnologia. Mais eficiência para operações que precisam integrar, testar, evoluir e escalar.
+
+Seções:
+- APIs
+- Documentação
+- Ambientes de teste
+- Guias de integração
+- Suporte técnico
+- Boas práticas operacionais
+
+Texto de apoio:
+A XSCALES oferece uma jornada técnica mais organizada para simplificar integrações e reduzir fricções entre produto, engenharia e operação.
+
+CTA:
+Acessar documentação
+
+Observação:
+Não precisa criar um portal técnico real.
+Crie uma página institucional premium com blocos claros, estrutura de recursos e chamadas para documentação futura.
+
+==================================================
+14. PÁGINA PARCEIROS
+==================================================
+
+Hero
+Headline:
+Parcerias que ampliam capacidade e aceleram crescimento
+
+Subheadline:
+A XSCALES está preparada para construir relações estratégicas com integradores, plataformas, consultorias e ecossistemas que compartilham visão de escala.
+
+Seções:
+- Parceiros de tecnologia
+- Parceiros comerciais
+- Ecossistemas regionais
+- Integrações estratégicas
+
+CTA:
+Quero ser parceiro
+
+==================================================
+15. PÁGINA SOBRE A XSCALES
+==================================================
+
+Hero
+Headline:
+Tecnologia, estrutura e visão para operações em expansão
+
+Subheadline:
+A XSCALES nasceu para simplificar a complexidade das operações financeiras modernas e apoiar empresas que desejam crescer com mais inteligência.
+
+Seções:
+- Quem somos
+Somos uma empresa de infraestrutura financeira com foco em pagamentos, banking e operação internacional.
+
+- O que acreditamos
+Acreditamos que crescimento sustentável exige mais do que ferramentas isoladas. Exige estrutura, visão integrada e execução confiável.
+
+- Como atuamos
+Combinamos tecnologia, governança e adaptação operacional para apoiar negócios em diferentes contextos e mercados.
+
+- Nossa visão
+Ser a infraestrutura escolhida por empresas que buscam escala, eficiência e capacidade real de expansão.
+
+==================================================
+16. PÁGINA MÍDIA / BLOG
+==================================================
+
+Hero
+Headline:
+Conteúdo para quem acompanha a transformação da infraestrutura financeira
+
+Subheadline:
+Notícias, análises, tendências e movimentos que impactam pagamentos, banking e expansão internacional.
+
+Categorias sugeridas:
+- Pagamentos
+- Banking
+- Expansão internacional
+- Compliance
+- Tecnologia
+- Mercados
+- Atualizações institucionais
+
+Exemplos de títulos:
+- Como a infraestrutura local influencia a expansão regional
+- O novo padrão operacional dos pagamentos digitais
+- Eficiência operacional em mercados de alta exigência
+- O que empresas em crescimento precisam observar ao expandir internacionalmente
+
+Implementação:
+- crie uma página editorial premium
+- use cards de artigos
+- crie conteúdo demonstrativo institucional
+- sem necessidade de CMS real
+- organizar os posts em dados locais
+
+==================================================
+17. PÁGINA SEGURANÇA
+==================================================
+
+Hero
+Headline:
+Segurança e governança como base da operação
+
+Subheadline:
+A XSCALES adota práticas, processos e padrões voltados à proteção das operações, integridade dos fluxos e confiança institucional.
+
+Seções:
+- Estrutura de proteção
+- Monitoramento contínuo
+- Controles operacionais
+- Governança e conformidade
+- Compromisso com estabilidade e responsabilidade
+
+==================================================
+18. PÁGINA COMPLIANCE
+==================================================
+
+Hero
+Headline:
+Conformidade como parte da nossa estrutura
+
+Subheadline:
+A XSCALES atua com atenção aos contextos regulatórios, à governança operacional e à integridade dos processos.
+
+Seções:
+- Princípios de atuação
+- Controles internos
+- Integridade operacional
+- Prevenção e monitoramento
+- Canais institucionais
+
+==================================================
+19. PÁGINA CONTATO
+==================================================
+
+Hero
+Headline:
+Converse com a XSCALES
+
+Subheadline:
+Nosso time está pronto para entender o momento da sua operação e apresentar caminhos mais eficientes para crescer com estrutura.
+
+Blocos:
+- Fale com especialistas
+- Solicite uma apresentação
+- Tire dúvidas institucionais
+- Avalie oportunidades de parceria
+
+Formulário:
+- Nome
+- Empresa
+- Cargo
+- E-mail corporativo
+- Telefone
+- País
+- Assunto
+- Mensagem
+
+CTA:
+Enviar mensagem
+
+Regras do formulário:
+- validação client-side
+- mensagens de erro elegantes
+- estado de sucesso
+- sem backend obrigatório
+- deixar arquitetura pronta para futura integração com API ou serviço de e-mail
+
+==================================================
+20. FOOTER
+==================================================
+
+O footer deve ser robusto, elegante e institucional.
+
+Estrutura:
+Empresa
+- Sobre a XSCALES
+- Mídia
+- Contato
+
+Soluções
+- Payments
+- Payouts
+- Banking
+- Cross Border
+- Orquestração
+
+Mercados
+- Brasil
+- México
+- Colômbia
+- Peru
+- Chile
+- Argentina
+
+Institucional
+- Segurança
+- Compliance
+- Privacidade
+- Termos e condições
+- Ouvidoria
+
+Também incluir:
+- redes sociais
+- marca
+- copyright
+- CTA discreto
+- possível seletor de idioma apenas visual, sem internacionalização real obrigatória
+
+==================================================
+21. SEO, PERFORMANCE E ACESSIBILIDADE
+==================================================
+
+Implemente:
+- title e meta description por página
+- Open Graph básico
+- estrutura semântica adequada
+- headings corretos
+- contraste visual bem resolvido
+- alt text em imagens decorativas relevantes
+- foco visível para navegação por teclado
+- boa performance
+- lazy load quando fizer sentido
+- código organizado para manutenção
+
+==================================================
+22. IMAGENS E VISUAIS
+==================================================
+
+Não dependa de imagens externas pesadas para o site funcionar bem.
+
+Pode usar:
+- gradientes
+- shapes abstratos
+- grids
+- glow sutil
+- linhas de conexão
+- mapas abstratos
+- mockups ilustrativos elegantes
+- placeholders premium bem construídos
+
+Se optar por imagens:
+- use com critério
+- mantenha coerência institucional
+- não use fotos genéricas que barateiem a marca
+
+==================================================
+23. QUALIDADE FINAL ESPERADA
+==================================================
+
+Quero um resultado com sensação de:
+- empresa séria
+- produto premium
+- estrutura global
+- design sob medida
+- engenharia organizada
+- alta percepção de valor
+
+Evite:
+- visual comum de landing page barata
+- excesso de cards repetitivos sem ritmo
+- tipografia fraca
+- grids desorganizados
+- excesso de texto mal distribuído
+- animações desnecessárias
+- uso aleatório da cor de destaque
+
+==================================================
+24. EXECUÇÃO
+==================================================
+
+1. Estruture o projeto
+2. Defina tokens visuais
+3. Monte layout global
+4. Implemente rotas
+5. Construa Home
+6. Construa páginas internas
+7. Popule conteúdo institucional
+8. Refine responsividade
+9. Refine animações
+10. Revise consistência visual
+11. Revise acessibilidade
+12. Entregue um resultado pronto para deploy
+
+==================================================
+25. ENTREGA FINAL
+==================================================
+
+Ao concluir:
+- garanta que todas as rotas funcionem
+- garanta consistência entre header, páginas e footer
+- garanta qualidade visual premium
+- garanta que a cor #C6B912 seja a assinatura da marca
+- garanta que o site pareça uma infraestrutura financeira de alto nível
+- garanta que o projeto esteja limpo, componentizado e pronto para evolução

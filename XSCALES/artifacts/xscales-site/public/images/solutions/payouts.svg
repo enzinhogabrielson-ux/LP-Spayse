@@ -1,0 +1,67 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0B1020"/>
+
+  <!-- Central hub -->
+  <circle cx="400" cy="300" r="60" fill="#10182B" stroke="#FFC500" stroke-width="3" opacity="0.9"/>
+  <circle cx="400" cy="300" r="40" fill="#FFC500" fill-opacity="0.2"/>
+
+  <!-- Distribution nodes -->
+  <g opacity="0.8">
+    <!-- Top node -->
+    <circle cx="400" cy="150" r="35" fill="#10182B" stroke="#FFC500" stroke-width="2"/>
+    <text x="400" y="155" text-anchor="middle" fill="#FFC500" font-size="24" font-weight="bold">$</text>
+
+    <!-- Right node -->
+    <circle cx="550" cy="250" r="35" fill="#10182B" stroke="#FFC500" stroke-width="2"/>
+    <text x="550" y="255" text-anchor="middle" fill="#FFC500" font-size="24" font-weight="bold">$</text>
+
+    <!-- Bottom right node -->
+    <circle cx="550" cy="400" r="35" fill="#10182B" stroke="#FFC500" stroke-width="2"/>
+    <text x="550" y="405" text-anchor="middle" fill="#FFC500" font-size="24" font-weight="bold">$</text>
+
+    <!-- Bottom left node -->
+    <circle cx="250" cy="400" r="35" fill="#10182B" stroke="#FFC500" stroke-width="2"/>
+    <text x="250" y="405" text-anchor="middle" fill="#FFC500" font-size="24" font-weight="bold">$</text>
+
+    <!-- Left node -->
+    <circle cx="250" cy="250" r="35" fill="#10182B" stroke="#FFC500" stroke-width="2"/>
+    <text x="250" y="255" text-anchor="middle" fill="#FFC500" font-size="24" font-weight="bold">$</text>
+  </g>
+
+  <!-- Animated arrows from center to nodes -->
+  <g opacity="0.6">
+    <path d="M400 240 L400 185" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="400,185 395,195 405,195" fill="#FFC500"/>
+
+    <path d="M460 280 L515 265" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="0.4s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="515,265 505,268 510,258" fill="#FFC500"/>
+
+    <path d="M460 340 L515 375" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="0.8s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="515,375 510,382 505,372" fill="#FFC500"/>
+
+    <path d="M340 340 L285 375" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="285,375 290,372 295,382" fill="#FFC500"/>
+
+    <path d="M340 280 L285 265" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="1.6s" repeatCount="indefinite"/>
+    </path>
+    <polygon points="285,265 290,258 295,268" fill="#FFC500"/>
+  </g>
+
+  <!-- Glow effect -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFC500" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFC500" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="400" cy="300" r="250" fill="url(#glow)"/>
+</svg>

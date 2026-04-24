@@ -1,0 +1,82 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#0B1020"/>
+
+  <!-- Dashboard frame -->
+  <g opacity="0.9">
+    <rect x="150" y="120" width="500" height="360" rx="12" fill="#10182B" stroke="#FFC500" stroke-width="2"/>
+
+    <!-- Header bar -->
+    <rect x="150" y="120" width="500" height="50" rx="12" fill="#050816" stroke="#FFC500" stroke-width="2"/>
+    <text x="180" y="152" fill="#FFC500" font-size="16" font-weight="bold">Reconciliação</text>
+  </g>
+
+  <!-- Data rows -->
+  <g opacity="0.7">
+    <!-- Row 1 -->
+    <rect x="180" y="200" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <rect x="420" y="200" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <circle cx="400" cy="215" r="8" fill="#FFC500" opacity="0.8"/>
+
+    <!-- Row 2 -->
+    <rect x="180" y="250" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <rect x="420" y="250" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <circle cx="400" cy="265" r="8" fill="#FFC500" opacity="0.8"/>
+
+    <!-- Row 3 -->
+    <rect x="180" y="300" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <rect x="420" y="300" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <circle cx="400" cy="315" r="8" fill="#FFC500" opacity="0.8"/>
+
+    <!-- Row 4 -->
+    <rect x="180" y="350" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <rect x="420" y="350" width="200" height="30" rx="4" fill="#050816" stroke="#FFC500" stroke-width="1" opacity="0.6"/>
+    <circle cx="400" cy="365" r="8" fill="#FFC500" opacity="0.8"/>
+  </g>
+
+  <!-- Matching lines -->
+  <g opacity="0.5">
+    <line x1="380" y1="215" x2="420" y2="215" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="380" y1="265" x2="420" y2="265" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="380" y1="315" x2="420" y2="315" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="380" y1="365" x2="420" y2="365" stroke="#FFC500" stroke-width="2">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Status indicators -->
+  <g opacity="0.8">
+    <circle cx="630" cy="215" r="6" fill="#FFC500">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="630" cy="265" r="6" fill="#FFC500">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="630" cy="315" r="6" fill="#FFC500">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="630" cy="365" r="6" fill="#FFC500">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" begin="0.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Chart icon -->
+  <g opacity="0.6">
+    <rect x="180" y="410" width="60" height="40" fill="none" stroke="#FFC500" stroke-width="1"/>
+    <polyline points="190,440 200,430 210,435 220,425 230,430" stroke="#FFC500" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Glow effect -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFC500" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#FFC500" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="400" cy="300" r="250" fill="url(#glow)"/>
+</svg>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e40523;
+      }
+
+      .cls-3 {
+        fill: #ffd004;
+      }
+
+      .cls-4 {
+        fill: #e4051e;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: #e4101c;
+      }
+
+      .cls-10 {
+        fill: #16428c;
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-1" cx="470" cy="150" r="125.7"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <circle class="cls-1" cx="150" cy="150" r="125.7"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <circle class="cls-1" cx="-170" cy="150" r="125.7"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-1" x="-329.06" y="25.5" width="476.58" height="250.2"/>
+    </clipPath>
+  </defs>
+  <g class="cls-11">
+    <rect class="cls-8" x="148.09" y="65.72" width="639.23" height="168.55"/>
+    <rect class="cls-4" x="281.96" y="101.02" width="371.48" height="97.95"/>
+  </g>
+  <g class="cls-5">
+    <g>
+      <path class="cls-2" d="M-43.78,249.19c0,16.03,12.99,29.02,29.02,29.02h329.5c16.03,0,29.02-12.99,29.02-29.02v-34.45H-43.78v34.45Z"/>
+      <path class="cls-3" d="M314.75,24.3H-14.75c-16.03,0-29.02,12.99-29.02,29.02v97.93h387.55V53.32c0-16.03-12.99-29.02-29.02-29.02Z"/>
+      <rect class="cls-10" x="-43.78" y="151.26" width="387.55" height="63.48"/>
+    </g>
+  </g>
+  <g class="cls-7">
+    <g id="Chile">
+      <g class="cls-6">
+        <rect class="cls-8" x="-281.38" y="7.49" width="428.9" height="268.21"/>
+        <rect class="cls-9" x="-329.06" y="150.6" width="476.58" height="125.1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #e51131;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        fill: #e41b21;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-1" cx="-170" cy="150" r="125.7"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="-394.23" y="19.19" width="448.47" height="261.62"/>
+    </clipPath>
+  </defs>
+  <g>
+    <path class="cls-5" d="M24.3,150c0,46.53,25.28,87.15,62.85,108.88V41.12c-37.57,21.73-62.85,62.35-62.85,108.88Z"/>
+    <path class="cls-5" d="M275.7,150c0-46.53-25.28-87.15-62.85-108.88v217.76c37.57-21.73,62.85-62.35,62.85-108.88Z"/>
+    <path class="cls-4" d="M150,24.3c-22.9,0-44.36,6.12-62.85,16.82v217.76c18.49,10.7,39.95,16.82,62.85,16.82s44.36-6.12,62.85-16.82V41.12c-18.49-10.7-39.95-16.82-62.85-16.82Z"/>
+  </g>
+  <g class="cls-6">
+    <g id="Panama">
+      <g class="cls-3">
+        <rect class="cls-4" x="-394.23" y="19.19" width="448.47" height="261.62"/>
+        <rect class="cls-2" x="-170" y="19.19" width="224.24" height="130.8"/>
+      </g>
+    </g>
+  </g>
+</svg>
