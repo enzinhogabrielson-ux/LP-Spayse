@@ -4,6 +4,8 @@ import { footerLinks } from '@/data/footer';
 import { getLang, setLang } from '@/lib/lang';
 import { tr } from '@/lib/i18n';
 
+import xlentLogo from '@/assets/XLent_Brasil.png';
+
 export default function Footer() {
   const lang = getLang();
   const t = (key: string) => tr(key, lang);
@@ -79,10 +81,10 @@ export default function Footer() {
             <div className="flex items-center gap-2 border-l border-subtle pl-4">
               <span className="text-xs text-muted-45">Powered by</span>
               <img
-                src="/xlent-brasil.png"
+                src={xlentLogo}
                 alt="XLent Brasil"
-                className="h-5 object-contain opacity-80 hover:opacity-100 transition-opacity"
-                style={{ maxWidth: '90px' }}
+                className="h-6 object-contain opacity-80 hover:opacity-100 transition-opacity"
+                style={{ maxWidth: '120px' }}
                 loading="lazy"
               />
             </div>
